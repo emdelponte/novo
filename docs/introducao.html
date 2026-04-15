@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>FIP 606</title>
+  <meta name="description" content="Disciplina da Pós-graduacão em Fitopatologia da UFV">
+  <meta name="generator" content="bookdown 0.7 and GitBook 2.6.7">
+
+  <meta property="og:title" content="FIP 606" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="Disciplina da Pós-graduacão em Fitopatologia da UFV" />
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="FIP 606" />
+  
+  <meta name="twitter:description" content="Disciplina da Pós-graduacão em Fitopatologia da UFV" />
+  
+
+<meta name="author" content="Prof. Emerson M. Del Ponte">
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="index.html">
+<link rel="next" href="carregando-os-dados-no-ambiente.html">
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./index.html">FIP 606 </a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Prefácio</a></li>
+<li class="chapter" data-level="1" data-path="introducao.html"><a href="introducao.html"><i class="fa fa-check"></i><b>1</b> Introdução</a><ul>
+<li class="chapter" data-level="1.1" data-path="introducao.html"><a href="introducao.html#estatistica-e-computacao"><i class="fa fa-check"></i><b>1.1</b> Estatística e computação</a></li>
+<li class="chapter" data-level="1.2" data-path="introducao.html"><a href="introducao.html#a-pesquisa-reproduzivel"><i class="fa fa-check"></i><b>1.2</b> A pesquisa reproduzível</a></li>
+<li class="chapter" data-level="1.3" data-path="introducao.html"><a href="introducao.html#boas-praticas"><i class="fa fa-check"></i><b>1.3</b> Boas práticas</a></li>
+<li class="chapter" data-level="1.4" data-path="introducao.html"><a href="introducao.html#sugestao-de-leituras"><i class="fa fa-check"></i><b>1.4</b> Sugestão de leituras</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="carregando-os-dados-no-ambiente.html"><a href="carregando-os-dados-no-ambiente.html"><i class="fa fa-check"></i><b>2</b> Carregando os dados no ambiente</a><ul>
+<li class="chapter" data-level="2.1" data-path="carregando-os-dados-no-ambiente.html"><a href="carregando-os-dados-no-ambiente.html#usando-o-argumento-text"><i class="fa fa-check"></i><b>2.1</b> Usando o argumento text</a></li>
+<li class="chapter" data-level="2.2" data-path="carregando-os-dados-no-ambiente.html"><a href="carregando-os-dados-no-ambiente.html#importando-do-excel"><i class="fa fa-check"></i><b>2.2</b> Importando do excel</a></li>
+<li class="chapter" data-level="2.3" data-path="carregando-os-dados-no-ambiente.html"><a href="carregando-os-dados-no-ambiente.html#dados-em-outros-arquivos"><i class="fa fa-check"></i><b>2.3</b> Dados em outros arquivos</a></li>
+<li class="chapter" data-level="2.4" data-path="carregando-os-dados-no-ambiente.html"><a href="carregando-os-dados-no-ambiente.html#dados-em-pacotes"><i class="fa fa-check"></i><b>2.4</b> Dados em pacotes</a></li>
+<li class="chapter" data-level="2.5" data-path="carregando-os-dados-no-ambiente.html"><a href="carregando-os-dados-no-ambiente.html#dados-de-pacotes"><i class="fa fa-check"></i><b>2.5</b> Dados de pacotes</a></li>
+<li class="chapter" data-level="2.6" data-path="carregando-os-dados-no-ambiente.html"><a href="carregando-os-dados-no-ambiente.html#referencias-na-web"><i class="fa fa-check"></i><b>2.6</b> Referências na web</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="visualizacao-de-dados.html"><a href="visualizacao-de-dados.html"><i class="fa fa-check"></i><b>3</b> Visualização de dados</a><ul>
+<li class="chapter" data-level="3.1" data-path="visualizacao-de-dados.html"><a href="visualizacao-de-dados.html#dados-de-levantamento"><i class="fa fa-check"></i><b>3.1</b> Dados de levantamento</a></li>
+<li class="chapter" data-level="3.2" data-path="visualizacao-de-dados.html"><a href="visualizacao-de-dados.html#construindo-um-grafico"><i class="fa fa-check"></i><b>3.2</b> Construindo um gráfico</a></li>
+<li class="chapter" data-level="3.3" data-path="visualizacao-de-dados.html"><a href="visualizacao-de-dados.html#dados-categoricos"><i class="fa fa-check"></i><b>3.3</b> Dados categóricos</a></li>
+<li class="chapter" data-level="3.4" data-path="visualizacao-de-dados.html"><a href="visualizacao-de-dados.html#dados-continuos"><i class="fa fa-check"></i><b>3.4</b> Dados contínuos</a></li>
+<li class="chapter" data-level="3.5" data-path="visualizacao-de-dados.html"><a href="visualizacao-de-dados.html#continuos-x-categoricos"><i class="fa fa-check"></i><b>3.5</b> Contínuos x categóricos</a></li>
+<li class="chapter" data-level="3.6" data-path="visualizacao-de-dados.html"><a href="visualizacao-de-dados.html#duas-variaveis-continuas"><i class="fa fa-check"></i><b>3.6</b> Duas variáveis contínuas</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="manipulacao-de-dados-no-r.html"><a href="manipulacao-de-dados-no-r.html"><i class="fa fa-check"></i><b>4</b> Manipulação de dados no R</a><ul>
+<li class="chapter" data-level="4.1" data-path="manipulacao-de-dados-no-r.html"><a href="manipulacao-de-dados-no-r.html#conjunto-de-dados"><i class="fa fa-check"></i><b>4.1</b> Conjunto de dados</a></li>
+<li class="chapter" data-level="4.2" data-path="manipulacao-de-dados-no-r.html"><a href="manipulacao-de-dados-no-r.html#selecionando-colunas"><i class="fa fa-check"></i><b>4.2</b> Selecionando colunas</a></li>
+<li class="chapter" data-level="4.3" data-path="manipulacao-de-dados-no-r.html"><a href="manipulacao-de-dados-no-r.html#selecionando-linhas"><i class="fa fa-check"></i><b>4.3</b> Selecionando linhas</a></li>
+<li class="chapter" data-level="4.4" data-path="manipulacao-de-dados-no-r.html"><a href="manipulacao-de-dados-no-r.html#renomeando-variaveis"><i class="fa fa-check"></i><b>4.4</b> Renomeando variáveis</a></li>
+<li class="chapter" data-level="4.5" data-path="manipulacao-de-dados-no-r.html"><a href="manipulacao-de-dados-no-r.html#adicionando-variaveis"><i class="fa fa-check"></i><b>4.5</b> Adicionando variáveis</a></li>
+<li class="chapter" data-level="4.6" data-path="manipulacao-de-dados-no-r.html"><a href="manipulacao-de-dados-no-r.html#removendo-variaveis"><i class="fa fa-check"></i><b>4.6</b> Removendo variáveis</a></li>
+<li class="chapter" data-level="4.7" data-path="manipulacao-de-dados-no-r.html"><a href="manipulacao-de-dados-no-r.html#reordenando-as-linhas"><i class="fa fa-check"></i><b>4.7</b> Reordenando as linhas</a></li>
+<li class="chapter" data-level="4.8" data-path="manipulacao-de-dados-no-r.html"><a href="manipulacao-de-dados-no-r.html#encontrar-duplicatas"><i class="fa fa-check"></i><b>4.8</b> Encontrar duplicatas</a></li>
+<li class="chapter" data-level="4.9" data-path="manipulacao-de-dados-no-r.html"><a href="manipulacao-de-dados-no-r.html#renomeando-niveis"><i class="fa fa-check"></i><b>4.9</b> Renomeando níveis</a></li>
+<li class="chapter" data-level="4.10" data-path="manipulacao-de-dados-no-r.html"><a href="manipulacao-de-dados-no-r.html#salvando-arquivo"><i class="fa fa-check"></i><b>4.10</b> Salvando arquivo</a></li>
+<li class="chapter" data-level="4.11" data-path="manipulacao-de-dados-no-r.html"><a href="manipulacao-de-dados-no-r.html#transposicao"><i class="fa fa-check"></i><b>4.11</b> Transposição</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="sumarizacao-dos-dados.html"><a href="sumarizacao-dos-dados.html"><i class="fa fa-check"></i><b>5</b> Sumarização dos dados</a><ul>
+<li class="chapter" data-level="5.1" data-path="sumarizacao-dos-dados.html"><a href="sumarizacao-dos-dados.html#conjunto-de-dados-1"><i class="fa fa-check"></i><b>5.1</b> Conjunto de dados</a></li>
+<li class="chapter" data-level="5.2" data-path="sumarizacao-dos-dados.html"><a href="sumarizacao-dos-dados.html#dados-categoricos-1"><i class="fa fa-check"></i><b>5.2</b> Dados categóricos</a></li>
+<li class="chapter" data-level="5.3" data-path="sumarizacao-dos-dados.html"><a href="sumarizacao-dos-dados.html#dados-continuos-1"><i class="fa fa-check"></i><b>5.3</b> Dados contínuos</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="delineamentos-experimentais.html"><a href="delineamentos-experimentais.html"><i class="fa fa-check"></i><b>6</b> Delineamentos experimentais</a><ul>
+<li class="chapter" data-level="6.1" data-path="delineamentos-experimentais.html"><a href="delineamentos-experimentais.html#experimento-simples"><i class="fa fa-check"></i><b>6.1</b> Experimento simples</a><ul>
+<li class="chapter" data-level="6.1.1" data-path="delineamentos-experimentais.html"><a href="delineamentos-experimentais.html#inteiramente-casualizado"><i class="fa fa-check"></i><b>6.1.1</b> Inteiramente casualizado</a></li>
+<li class="chapter" data-level="6.1.2" data-path="delineamentos-experimentais.html"><a href="delineamentos-experimentais.html#blocos-casualizados"><i class="fa fa-check"></i><b>6.1.2</b> Blocos casualizados</a></li>
+</ul></li>
+<li class="chapter" data-level="6.2" data-path="delineamentos-experimentais.html"><a href="delineamentos-experimentais.html#experimento-fatorial"><i class="fa fa-check"></i><b>6.2</b> Experimento fatorial</a><ul>
+<li class="chapter" data-level="6.2.1" data-path="delineamentos-experimentais.html"><a href="delineamentos-experimentais.html#inteiramente-casualizado-1"><i class="fa fa-check"></i><b>6.2.1</b> Inteiramente casualizado</a></li>
+<li class="chapter" data-level="6.2.2" data-path="delineamentos-experimentais.html"><a href="delineamentos-experimentais.html#parcela-dividida"><i class="fa fa-check"></i><b>6.2.2</b> Parcela dividida</a></li>
+<li class="chapter" data-level="6.2.3" data-path="delineamentos-experimentais.html"><a href="delineamentos-experimentais.html#blocos-casualizados-1"><i class="fa fa-check"></i><b>6.2.3</b> Blocos casualizados</a></li>
+</ul></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">FIP 606</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="introducao" class="section level1">
+<h1><span class="header-section-number">Capítulo 1</span> Introdução</h1>
+<p>Um pesquisador necessita ter conhecimento sobre análise de dados (ou estatística) durante a sua formação. Ao longo de sua vida profissional, deve continuar se atualizando sobre as tendências e novas ferramentas da metodologia científica, especialmente se o trabalho envolve experimentos ou levantamentos de dados.</p>
+<p>Além de ter que saber como escrever um artigo científico, ou outro produto da pesquisa como um relatório técnico para agência de fomento ou comunicação em evento, o pesquisador tem na estatística o suporte às conclusões de um trabalho. A publicação científica na forma de um artigo em revista com corpo editorial é um dos principais e mais valorizados produtos da pesquisa. Um pesquisador é considerado produtivo com base no número de artigos publicados, associado à qualidade dos trabalhos com base em inúmeras métricas, tais como fator de impacto da revista, número de citações do trabalho e o índice H do pesquisador.</p>
+<p>Para se ter um bom artigo científico deve-se utilizar os métodos apropriados para o planejamento da pesquisa e da coleta, preparo e a análise dos dados, dos quais dependerão os resultados. Não raro os estudantes concentrarem a maior parte do tempo na condução do trabalho (bancada ou campo) e relativamente pouco em revisão bibliográfica, leitura crítica, redação científica e análise e visualização dos dados. Essas atividades são tão ou mais importantes do que a condução do trabalho, principalmente se o mesmo almeja uma carreira na academia. São raros os estudantes que, durante a pós-graduação, cursam disciplinas de metodologia científica ou de análise de dados aplicada às situações reais e operacionais do a dia do pesquisador - o mais comum é cursar um disciplina de estatística que tem um enfoque mais teórico</p>
+<div id="estatistica-e-computacao" class="section level2">
+<h2><span class="header-section-number">1.1</span> Estatística e computação</h2>
+<p>Na área de ciências biológicas e agrárias é muito comum os trabalhos acadêmicos serem baseados em uma pesquisa observacional ou experimental, ou a combinação de ambas, a qual é baseada em evidências, os dados da pesquisa. Assim, saber como planejar as etapas da pesquisa, especialmente a forma de obtenção, preparo e análise estatística dos dados, é fundamental para o sucesso da mesma. O estudante deve ter um conhecimento mínimo necessário para conduzir o seu trabalho e, idealmente, aprender a conduzir a análise de maneira independente ou bem assessorado. Para isso, depende-se dos programas computacionais.</p>
+<p>Quando há alguma dificuldade, ou mesmo para que tem facilidade em utilizar programas estatísticos, é desejável consultar um estatístico ou pesquisador da área, se não o orientador, que tenha bom domínio de métodos quantitativos para orientar sobre a análise mais apropriadas. Importante lembra que isso deve ser feito antes da condução do experimento!</p>
+<p>Um fato muito comum e que leva a erros que são propagados pelos pesquisadores é negligenciar a estatística e lembrar dela apenas quando da definição de um teste de hipótese. Para se ter noção do quanto a estatística é negligenciada em trabalhos de pesquisa, basta observar quantas linhas são dedicadas à descrição da análise de dados na seção de metodologia em artigos científicos. Poucos trabalhos mencionam detalhes ou justificam as decisões que foram tomadas no processo de análise. Apenas citar o teste utilizado e o programa computacional é colocar algo de extrema importância para a validade das conclusões em um segundo plano.</p>
+<p>A análise estatística é usualmente conduzida em um ambiente computacional de familiaridade do pesquisador ou de alguém que o auxilia na condução da pesquisa. Comumente, todo o processo é conduzido em diversos programas que executam tarefas diferentes. Por exemplo:</p>
+<ul>
+<li>Planilha eletrônica para organizar os dados</li>
+<li>Planilha ou programa de estatística para análise exploratória</li>
+<li>Um programa geral ou específico para realizar os procedimentos ou testes estatísticos</li>
+<li>Um programa para gerar os gráficos para publicação</li>
+</ul>
+<p>Um pesquisador que objetiva que sua pesquisa seja reproduzida terá dificuldade em documentar todos os passos de uma análise que utiliza vários programas e, em sua maioria, com programas de movimento de mouse (clique em menus). O problema é resolvido quando se utiliza um ambiente computacional que permita conduzir essas etapas.</p>
+<p>Não são muitas opções que existem nesse sentido. A minha de preferência é o ambiente computacional e estatístico R que tem, no ambiente de desenvolvimento integrado RStudio, uma excelente opção para trabalhar com tudo que o pesquisador precisa para conduzir as análises, bem como produzir relatórios de análise que integram textos e códigos interpretáveis.</p>
+<p>Nesta disciplina, o estudante aprenderá sobre boas práticas da análise de dados em sua rotina de trabalho. Com hábitos simples, persistência, sistemática e dedicação em um ambiente computacional como o R, o pesquisador moderno estará adotando práticas que, além de poder melhorar a qualidade e confiabilidade nos resultados da análise, que contribua para a maior transparência da ciência.</p>
+<p>Dentre os ambientes de programação disponíveis, as ferramentas mais usadas para implementar uma pesquisa reproduzível de maneira efetiva (dados, análises e saídas são combinados, idealmente, em um único ambiente de programação), são baseados em duas linguagens principais: Python e R, cujos produtos principais são Jupyter Notebooks e RMarkdown, respectivamente. Esses pacotes ou rotinas facilitam sobremaneira a documentação e reprodução das análises bem como aceleram a obtenção dos resultados e visualizações assim que novos dados forem adicionados ou reanálises são necessárias.</p>
+<p>Além de aprender a utilizar esses programas, é importante que o pesquisador aprenda a usar efetivamente planilhas eletrônicas para reunir e organizar os dados que serão usados na pesquisa. Por princípio, as planilhas eletrônicas como Excel, Libre Office Calc, Numbers e Google Sheets são usadas apenas para armazenar os dados e não para processar, transformar, visualizar ou fazer sumários prévios. O motivo é muito simples: esses procedimentos todos feitos com movimentos de mouse não são reproduzíveis! além disso, na pesquisa reproduzível os dados originais obtidos pelo pesquisador ou recebidos/coletados de outras fontes devem ser mantidos na sua forma original. Caso seja modificado de forma que é mais fácil fazer em uma planilha como renomear variáveis, é importante manter sempre uma planilha original como referência.</p>
+</div>
+<div id="a-pesquisa-reproduzivel" class="section level2">
+<h2><span class="header-section-number">1.2</span> A pesquisa reproduzível</h2>
+<p>A reprodutibilidade em ciência é um tema que tem despertado a atenção de pesquisadores, agências de fomento e a mídia acadêmica nos últimos anos. São frequentes os relatos de que um estudo que foi repetido gerou resultados diferentes ou mesmo discordantes de um estudo anterior. Os próprios pesquisadores tem se manifestado com grande preocupação com uma alegada “crise de reprodutibilidade” na ciência.</p>
+<p>As possíveis causas e algumas soluções para minimizar o problema vem sendo discutidas e algumas ações implementadas. É importante que o estudante e o pesquisador em geral tenham conhecimento sobre a correta definição dos termos para melhorar a comunicação. Reprodutibilidade tem diferentes significados dependendo do contexto. Aqui, definimos como:</p>
+<blockquote>
+<p>Pesquisa reproduzível é aquela em que um pesquisador consegue obter o mesmo resultado de um estudo prévio usando os mesmos materiais (dados) e métodos (estatística) da pesquisa original.</p>
+</blockquote>
+<p>Portanto, é necessário que o pesquisador que deseja reproduzir um estudo tenha 1) acesso aos dados e 2) saiba os detalhes de como a análise foi feita</p>
+<p>Os resultados discordantes, ou inconsistentes, em diferentes estudos se refere, na verdade, à <strong>replicabilidade</strong>, ou a <strong>reprodutibilidade inferencial</strong>, segundo alguns autores. Em ciência, parte-se do princípio que os resultados de uma pesquisa publicados em revistas com corpo editorial tenham sido obtidos segundo os princípios que regem os métodos e a ética científica. No entanto, os editores e revisores, quase sempre, não tem como verificar se todos os passos do trabalho, especialmente a análise dos dados, foram executados corretamente, uma vez que avaliam apenas o artigo científico e, raramente, algum material suplementar quando esse está disponível.</p>
+<p>Um artigo científico é escrito e submetido para publicação segundo convenções da academia que definem o conteúdo mínimo para que o trabalho seja avaliado pelos pares. Normalmente esse conteúdo consiste no texto, gráficos e tabelas e, idealmente, um material suplementar. Organizar todo esse material de forma sistemática exige tempo do pesquisador, o que acaba desencorajando muitos pesquisadores que não adotam rotinas de boas práticas da pesquisa reproduzível. É nesse contexto que entram rotinas de programação em ambientes computacionais.</p>
+<p>Segundo <a href="https://yihui.name">Yihui Xie</a>, um dos principais desenvolvedores do R da empresa RStudio de programas (ex. knitr, rMarkdown, bookdown, etc) que visam facilitar a pesquisa reproduzível:</p>
+<blockquote>
+<p>O produto final da pesquisa não é somente o artigo científico, mas tambémm o ambiente computacional completo utilizado para produzir os resultados no artigo como os códigos e os dados necessários para a reprodução dos resultados e avanço da pesquisa (Xie et al. 2014).</p>
+</blockquote>
+</div>
+<div id="boas-praticas" class="section level2">
+<h2><span class="header-section-number">1.3</span> Boas práticas</h2>
+<p>Para um estudante ou cientista que está iniciando um projeto é importante que as boas práticas da pesquisa reproduzível sejam incorporadas no seu dia a dia, e que sejam implementadas desde a concepção e o planejamento do mesmo.</p>
+<p>São atividades que dependem essencialmente de capacidade organizacional e planejamento do tempo e documentação das etapas do processo. É preciso seguir rotinas e gerar documentos que seguem certas normas de padronização, especialmente se o trabalho é feito de forma colaborativa. Analogamente, é como escrever e formatar um artigo científico que deve ser estruturado e apresentado segundo determinadas normas. Aqui, o produto gerado não é somente o documento do manuscrito e um punhado de gráficos, mas sim tudo que foi gerado durante a pesquisa, e que precisa estar bem organizado e formatado para uso posterior e publicação/divulgação. Para obter sucesso na pesquisa, é preciso:</p>
+<ul>
+<li>Ser diligente e sistemático</li>
+<li>Aprender novas ferramentas (computacionais)</li>
+<li>Aprender a organizar arquivos diversos</li>
+<li>Documentar todas as etapas do trabalho</li>
+</ul>
+<p>No dia a dia, os pesquisadores não sobrevivem sem os computadores como ferramenta central de trabalho. Atualmente, não é preciso ser um “nerd” para que se possa utilizar com bastante eficiência os computadores para ser eficiente e produtivo no trabalho. Em algumas áreas da pesquisa é necessário maior envolvimento com linguagens de programação ou programas específicos que exigem um maior esforço de aprendizado da lógica da programação.</p>
+<p>No entanto, o mais importante e desafiador é certamente aprender a sistemática de trabalho do que ser um expert em programação - mas é necessário sim aprender o básico de uma linguagem de programação (R ou Python) para implementar as boas práticas. Durante nossa formação acadêmica não recebemos nenhum ou muito pouco treinamento em como preparar e organizar de maneira apropriadas os arquivos diversos incluindo dados, códigos, gráficos, tabelas, manuscrito, figuras, etc. Apender uma rotina de análise de dados é fundamental para a) facilitar o nosso próprio trabalho de análise-reanálise; b) permitir o uso dos dados e códigos por colaboradores e c) documentar a análise, ou seja, explicar o que, por que e como foi feito.</p>
+<p>Quando não somos treinados a trabalhar dessa maneira é muito comum:</p>
+<ul>
+<li>criarmos um número grande arquivos e versões desnecessárias que dificultam o processo;</li>
+<li>gerarmos inconsistência e redundância nas análises;</li>
+<li>não termos um controle adequado de versões e dificuldade quando é solicitado o compartilhamento do trabalhos;</li>
+<li>levarmos um tempo longo para organizar o trabalho que só o próprio pesquisador entende (quando entende!).</li>
+</ul>
+<p>Práticas que deveriam ser simples como refazer um gráfico ou estatísticas, após receber os pareceres de revisores, se tornam um verdadeiro pesadelo para alguns pesquisadores, o que contribui para o atraso na publicação de artigos.</p>
+</div>
+<div id="sugestao-de-leituras" class="section level2">
+<h2><span class="header-section-number">1.4</span> Sugestão de leituras</h2>
+<p>Esta seção estará sendo atualizada a cada semestre com sugestões de leituras no tema pesquisa reproduzível utilizando o ambiente R.</p>
+<p>Primeiros passos no R/RStudio - <a href="https://support.rstudio.com/hc/en-us/articles/200526207-Using-Projects">Using Projects</a></p>
+<p>Textos e tutoriais - <a href="https://r4ds.had.co.nz/">R for data science</a> - <a href="https://datacarpentry.org/R-ecology-lesson/index.html">Data Analysis and Visualization in R for Ecologists</a></p>
+
+<div align=justify>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="carregando-os-dados-no-ambiente.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/index.Rmd",
+"text": "Edit"
+},
+"download": ["bookdown-demo.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

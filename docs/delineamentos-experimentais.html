@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>FIP 606</title>
+  <meta name="description" content="Disciplina da Pós-graduacão em Fitopatologia da UFV">
+  <meta name="generator" content="bookdown 0.7 and GitBook 2.6.7">
+
+  <meta property="og:title" content="FIP 606" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="Disciplina da Pós-graduacão em Fitopatologia da UFV" />
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="FIP 606" />
+  
+  <meta name="twitter:description" content="Disciplina da Pós-graduacão em Fitopatologia da UFV" />
+  
+
+<meta name="author" content="Prof. Emerson M. Del Ponte">
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="sumarizacao-dos-dados.html">
+
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./index.html">FIP 606 </a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Prefácio</a></li>
+<li class="chapter" data-level="1" data-path="introducao.html"><a href="introducao.html"><i class="fa fa-check"></i><b>1</b> Introdução</a><ul>
+<li class="chapter" data-level="1.1" data-path="introducao.html"><a href="introducao.html#estatistica-e-computacao"><i class="fa fa-check"></i><b>1.1</b> Estatística e computação</a></li>
+<li class="chapter" data-level="1.2" data-path="introducao.html"><a href="introducao.html#a-pesquisa-reproduzivel"><i class="fa fa-check"></i><b>1.2</b> A pesquisa reproduzível</a></li>
+<li class="chapter" data-level="1.3" data-path="introducao.html"><a href="introducao.html#boas-praticas"><i class="fa fa-check"></i><b>1.3</b> Boas práticas</a></li>
+<li class="chapter" data-level="1.4" data-path="introducao.html"><a href="introducao.html#sugestao-de-leituras"><i class="fa fa-check"></i><b>1.4</b> Sugestão de leituras</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="carregando-os-dados-no-ambiente.html"><a href="carregando-os-dados-no-ambiente.html"><i class="fa fa-check"></i><b>2</b> Carregando os dados no ambiente</a><ul>
+<li class="chapter" data-level="2.1" data-path="carregando-os-dados-no-ambiente.html"><a href="carregando-os-dados-no-ambiente.html#usando-o-argumento-text"><i class="fa fa-check"></i><b>2.1</b> Usando o argumento text</a></li>
+<li class="chapter" data-level="2.2" data-path="carregando-os-dados-no-ambiente.html"><a href="carregando-os-dados-no-ambiente.html#importando-do-excel"><i class="fa fa-check"></i><b>2.2</b> Importando do excel</a></li>
+<li class="chapter" data-level="2.3" data-path="carregando-os-dados-no-ambiente.html"><a href="carregando-os-dados-no-ambiente.html#dados-em-outros-arquivos"><i class="fa fa-check"></i><b>2.3</b> Dados em outros arquivos</a></li>
+<li class="chapter" data-level="2.4" data-path="carregando-os-dados-no-ambiente.html"><a href="carregando-os-dados-no-ambiente.html#dados-em-pacotes"><i class="fa fa-check"></i><b>2.4</b> Dados em pacotes</a></li>
+<li class="chapter" data-level="2.5" data-path="carregando-os-dados-no-ambiente.html"><a href="carregando-os-dados-no-ambiente.html#dados-de-pacotes"><i class="fa fa-check"></i><b>2.5</b> Dados de pacotes</a></li>
+<li class="chapter" data-level="2.6" data-path="carregando-os-dados-no-ambiente.html"><a href="carregando-os-dados-no-ambiente.html#referencias-na-web"><i class="fa fa-check"></i><b>2.6</b> Referências na web</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="visualizacao-de-dados.html"><a href="visualizacao-de-dados.html"><i class="fa fa-check"></i><b>3</b> Visualização de dados</a><ul>
+<li class="chapter" data-level="3.1" data-path="visualizacao-de-dados.html"><a href="visualizacao-de-dados.html#dados-de-levantamento"><i class="fa fa-check"></i><b>3.1</b> Dados de levantamento</a></li>
+<li class="chapter" data-level="3.2" data-path="visualizacao-de-dados.html"><a href="visualizacao-de-dados.html#construindo-um-grafico"><i class="fa fa-check"></i><b>3.2</b> Construindo um gráfico</a></li>
+<li class="chapter" data-level="3.3" data-path="visualizacao-de-dados.html"><a href="visualizacao-de-dados.html#dados-categoricos"><i class="fa fa-check"></i><b>3.3</b> Dados categóricos</a></li>
+<li class="chapter" data-level="3.4" data-path="visualizacao-de-dados.html"><a href="visualizacao-de-dados.html#dados-continuos"><i class="fa fa-check"></i><b>3.4</b> Dados contínuos</a></li>
+<li class="chapter" data-level="3.5" data-path="visualizacao-de-dados.html"><a href="visualizacao-de-dados.html#continuos-x-categoricos"><i class="fa fa-check"></i><b>3.5</b> Contínuos x categóricos</a></li>
+<li class="chapter" data-level="3.6" data-path="visualizacao-de-dados.html"><a href="visualizacao-de-dados.html#duas-variaveis-continuas"><i class="fa fa-check"></i><b>3.6</b> Duas variáveis contínuas</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="manipulacao-de-dados-no-r.html"><a href="manipulacao-de-dados-no-r.html"><i class="fa fa-check"></i><b>4</b> Manipulação de dados no R</a><ul>
+<li class="chapter" data-level="4.1" data-path="manipulacao-de-dados-no-r.html"><a href="manipulacao-de-dados-no-r.html#conjunto-de-dados"><i class="fa fa-check"></i><b>4.1</b> Conjunto de dados</a></li>
+<li class="chapter" data-level="4.2" data-path="manipulacao-de-dados-no-r.html"><a href="manipulacao-de-dados-no-r.html#selecionando-colunas"><i class="fa fa-check"></i><b>4.2</b> Selecionando colunas</a></li>
+<li class="chapter" data-level="4.3" data-path="manipulacao-de-dados-no-r.html"><a href="manipulacao-de-dados-no-r.html#selecionando-linhas"><i class="fa fa-check"></i><b>4.3</b> Selecionando linhas</a></li>
+<li class="chapter" data-level="4.4" data-path="manipulacao-de-dados-no-r.html"><a href="manipulacao-de-dados-no-r.html#renomeando-variaveis"><i class="fa fa-check"></i><b>4.4</b> Renomeando variáveis</a></li>
+<li class="chapter" data-level="4.5" data-path="manipulacao-de-dados-no-r.html"><a href="manipulacao-de-dados-no-r.html#adicionando-variaveis"><i class="fa fa-check"></i><b>4.5</b> Adicionando variáveis</a></li>
+<li class="chapter" data-level="4.6" data-path="manipulacao-de-dados-no-r.html"><a href="manipulacao-de-dados-no-r.html#removendo-variaveis"><i class="fa fa-check"></i><b>4.6</b> Removendo variáveis</a></li>
+<li class="chapter" data-level="4.7" data-path="manipulacao-de-dados-no-r.html"><a href="manipulacao-de-dados-no-r.html#reordenando-as-linhas"><i class="fa fa-check"></i><b>4.7</b> Reordenando as linhas</a></li>
+<li class="chapter" data-level="4.8" data-path="manipulacao-de-dados-no-r.html"><a href="manipulacao-de-dados-no-r.html#encontrar-duplicatas"><i class="fa fa-check"></i><b>4.8</b> Encontrar duplicatas</a></li>
+<li class="chapter" data-level="4.9" data-path="manipulacao-de-dados-no-r.html"><a href="manipulacao-de-dados-no-r.html#renomeando-niveis"><i class="fa fa-check"></i><b>4.9</b> Renomeando níveis</a></li>
+<li class="chapter" data-level="4.10" data-path="manipulacao-de-dados-no-r.html"><a href="manipulacao-de-dados-no-r.html#salvando-arquivo"><i class="fa fa-check"></i><b>4.10</b> Salvando arquivo</a></li>
+<li class="chapter" data-level="4.11" data-path="manipulacao-de-dados-no-r.html"><a href="manipulacao-de-dados-no-r.html#transposicao"><i class="fa fa-check"></i><b>4.11</b> Transposição</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="sumarizacao-dos-dados.html"><a href="sumarizacao-dos-dados.html"><i class="fa fa-check"></i><b>5</b> Sumarização dos dados</a><ul>
+<li class="chapter" data-level="5.1" data-path="sumarizacao-dos-dados.html"><a href="sumarizacao-dos-dados.html#conjunto-de-dados-1"><i class="fa fa-check"></i><b>5.1</b> Conjunto de dados</a></li>
+<li class="chapter" data-level="5.2" data-path="sumarizacao-dos-dados.html"><a href="sumarizacao-dos-dados.html#dados-categoricos-1"><i class="fa fa-check"></i><b>5.2</b> Dados categóricos</a></li>
+<li class="chapter" data-level="5.3" data-path="sumarizacao-dos-dados.html"><a href="sumarizacao-dos-dados.html#dados-continuos-1"><i class="fa fa-check"></i><b>5.3</b> Dados contínuos</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="delineamentos-experimentais.html"><a href="delineamentos-experimentais.html"><i class="fa fa-check"></i><b>6</b> Delineamentos experimentais</a><ul>
+<li class="chapter" data-level="6.1" data-path="delineamentos-experimentais.html"><a href="delineamentos-experimentais.html#experimento-simples"><i class="fa fa-check"></i><b>6.1</b> Experimento simples</a><ul>
+<li class="chapter" data-level="6.1.1" data-path="delineamentos-experimentais.html"><a href="delineamentos-experimentais.html#inteiramente-casualizado"><i class="fa fa-check"></i><b>6.1.1</b> Inteiramente casualizado</a></li>
+<li class="chapter" data-level="6.1.2" data-path="delineamentos-experimentais.html"><a href="delineamentos-experimentais.html#blocos-casualizados"><i class="fa fa-check"></i><b>6.1.2</b> Blocos casualizados</a></li>
+</ul></li>
+<li class="chapter" data-level="6.2" data-path="delineamentos-experimentais.html"><a href="delineamentos-experimentais.html#experimento-fatorial"><i class="fa fa-check"></i><b>6.2</b> Experimento fatorial</a><ul>
+<li class="chapter" data-level="6.2.1" data-path="delineamentos-experimentais.html"><a href="delineamentos-experimentais.html#inteiramente-casualizado-1"><i class="fa fa-check"></i><b>6.2.1</b> Inteiramente casualizado</a></li>
+<li class="chapter" data-level="6.2.2" data-path="delineamentos-experimentais.html"><a href="delineamentos-experimentais.html#parcela-dividida"><i class="fa fa-check"></i><b>6.2.2</b> Parcela dividida</a></li>
+<li class="chapter" data-level="6.2.3" data-path="delineamentos-experimentais.html"><a href="delineamentos-experimentais.html#blocos-casualizados-1"><i class="fa fa-check"></i><b>6.2.3</b> Blocos casualizados</a></li>
+</ul></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">FIP 606</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="delineamentos-experimentais" class="section level1">
+<h1><span class="header-section-number">Capítulo 6</span> Delineamentos experimentais</h1>
+<p>Experimentos podem ser planejados em diferentes esquemas ou arranjos e delineamentos (design). <strong>Delineamento</strong> é a forma de distribuição ou aleatorização dos tratamentos na área experimental. Os principais delineamentos experimentais utilizados são: inteiramente casualizado, blocos casualizados e quadrado latino. Já o esquema (ou arranjo) é a forma que dois ou mais fatores, estudados ao mesmo temo, sendo os principais o fatorial, parcela subdividida e experimentos em faixa. Os arranjos e delineamentos mais comumente utilizados em experimentos de fitopatologia são:</p>
+<ul>
+<li>Inteiramente casualizado (CRD)</li>
+<li>Blocos casualizados (RCBD)</li>
+<li>Parcelas subdivididas (split-plot)</li>
+</ul>
+<p>Em quaisquer dos casos, a alocação dos tratamentos nas unidades experimentais deve ser feita de maneira aleatória, segundo o princípio da casualização. Em experimentos com controle local, os tratamentos são aleatorizados dentro de cada bloco. No R, o pacote <code>agricolae</code> tem algumas funções que permitem ao pesquisador gerar delineamentos específicos. Nas páginas de <code>help</code> do pacote agricolae, existem algumas funções <code>design</code> para vários tipos de delineamentos. Na sequência, serão demonstrados os delineamentos principais com base em exemplos da literatura fitopatológica.</p>
+<div id="experimento-simples" class="section level2">
+<h2><span class="header-section-number">6.1</span> Experimento simples</h2>
+<div id="inteiramente-casualizado" class="section level3">
+<h3><span class="header-section-number">6.1.1</span> Inteiramente casualizado</h3>
+<p>Indicado quando há baixa ou nenhuma variabilidade entre as parcelas experimentais, assim as condições experimentais são bem controladas. Indicado para experimentos de laboratórios, câmra climatizada, casa de vegetação, ou mesmo em campo onde há pouca heterogeneidade na área. A vantagem é que um delinamento mais simples de instalar e conduzir, além de ter o maior número de graus de liberdade.</p>
+<p>Nome da função : <code>?design.crd</code></p>
+<p><strong>Exercício</strong></p>
+<p>Gerar um delineamento para um experimento em ambiente controlado com objetivo de para verificar o efeito de duas doses de Mg no desenvolvimento da escaldadura do arroz.</p>
+<blockquote>
+<p><em> Two experiments (Experiments 1 and 2), consisting of two treatments (hereafter referred to as 0.5 and 1.5 mM Mg) and arranged in a completely randomized design with eight replications, were performed to determine the foliar Mg concentration and the length of the leaf scald lesions. Fonte <a href="http://link.springer.com/article/10.1007/s40858-016-0080-x/fulltext.html">Tatagiba and Rodrigues (2016)</a>. </em></p>
+</blockquote>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span> (agricolae)<span class="co"># carrega o pacote no ambiente</span>
+dose &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;dose_0.5&quot;</span>, <span class="st">&quot;dose_1.5&quot;</span>) <span class="co"># níveis do fator</span>
+r &lt;-<span class="st"> </span><span class="dv">8</span>            <span class="co"># número de repetições</span>
+crd1 &lt;-<span class="st"> </span><span class="kw">design.crd</span>(dose, r, <span class="dt">serie =</span> <span class="dv">2</span>,  <span class="dv">2543</span>)</code></pre></div>
+<p>Cria uma matriz para visualizar a alocação física dos tratamentos de acordo com o espaço disponível.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">str</span>(crd1) <span class="co"># verifica a estrutura do objeto</span></code></pre></div>
+<pre><code>## List of 2
+##  $ parameters:List of 7
+##   ..$ design: chr &quot;crd&quot;
+##   ..$ trt   : chr [1:2] &quot;dose_0.5&quot; &quot;dose_1.5&quot;
+##   ..$ r     : num [1:2] 8 8
+##   ..$ serie : num 2
+##   ..$ seed  : num 2543
+##   ..$ kinds : chr &quot;Super-Duper&quot;
+##   ..$       : logi TRUE
+##  $ book      :&#39;data.frame&#39;:  16 obs. of  3 variables:
+##   ..$ plots: num [1:16] 101 102 103 104 105 106 107 108 109 110 ...
+##   ..$ r    : int [1:16] 1 2 3 4 1 2 3 4 5 5 ...
+##   ..$ dose : Factor w/ 2 levels &quot;dose_0.5&quot;,&quot;dose_1.5&quot;: 2 2 2 2 1 1 1 1 1 2 ...</code></pre>
+<p>Note acima que o objeto é uma lista. Agora vamos gerar uma matriz da ordem de alocações dos tratamentos com quatro colunas. Primeiro vamos extrair as informações sobre o código das parcelas, a repetição e o tratamento de nível de magnésio e atribuir em <code>m1</code>. Depois, com a função <code>interaction</code> criaremos uma nova codificação mais intuitiva da repetição do tratamento.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">m1 &lt;-<span class="st"> </span><span class="kw">data.frame</span>(crd1<span class="op">$</span>book<span class="op">$</span>plots, crd1<span class="op">$</span>book<span class="op">$</span>dose, crd1<span class="op">$</span>book<span class="op">$</span>r)
+<span class="kw">colnames</span> (m1) &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;code&quot;</span>, <span class="st">&quot;Mg&quot;</span>, <span class="st">&quot;rep&quot;</span>) <span class="co"># muda o nome das variáveis</span>
+<span class="co"># cria um código para a combinação repetição e tratamento</span>
+<span class="co"># especifica o separador que vai indicar o número da repetição</span>
+m1<span class="op">$</span>trat &lt;-<span class="st"> </span><span class="kw">interaction</span> (m1<span class="op">$</span>Mg, m1<span class="op">$</span>rep, <span class="dt">sep =</span> <span class="st">&quot;_rep&quot;</span>) 
+<span class="kw">matrix</span> (m1<span class="op">$</span>trat, <span class="dt">ncol =</span> <span class="dv">4</span>)  <span class="co"># função para gerar matriz</span></code></pre></div>
+<pre><code>##      [,1]            [,2]            [,3]            [,4]           
+## [1,] &quot;dose_1.5_rep1&quot; &quot;dose_0.5_rep1&quot; &quot;dose_0.5_rep5&quot; &quot;dose_0.5_rep7&quot;
+## [2,] &quot;dose_1.5_rep2&quot; &quot;dose_0.5_rep2&quot; &quot;dose_1.5_rep5&quot; &quot;dose_1.5_rep7&quot;
+## [3,] &quot;dose_1.5_rep3&quot; &quot;dose_0.5_rep3&quot; &quot;dose_0.5_rep6&quot; &quot;dose_0.5_rep8&quot;
+## [4,] &quot;dose_1.5_rep4&quot; &quot;dose_0.5_rep4&quot; &quot;dose_1.5_rep6&quot; &quot;dose_1.5_rep8&quot;</code></pre>
+<p>Acima, a matriz de disposição dos tratamentos com a indicação dos códigos dos tratamento e sua respectiva repetição.</p>
+</div>
+<div id="blocos-casualizados" class="section level3">
+<h3><span class="header-section-number">6.1.2</span> Blocos casualizados</h3>
+<p>Indicado para situações em que as condições experimentais não são homogêneas. Assim, a área heterogênea é dividida em blocos com maior homogeneidade possível. A vantagem é justamente controlar as diferenças entre os blocos, levando assim a uma estimativa mais exata variância residual. As desvantagens incluem menor número de graus de liberdade.</p>
+<p>No pacote <code>agricolae</code> o nome da função é <code>design.rcbd</code>.</p>
+<p><strong>Exercício</strong></p>
+<p>Gera um delineamento para o experimento conforme descrição abaixo</p>
+<blockquote>
+<p><em> Randomized complete block design experiments with two cultivation systems (conventional and no-tillage) and four replications were carried out during the 1997/2003 growing seasons at Campo Mourão, PR, Brazil. The plot size was 11 m×3.5 m with seven rows of soybean cv. BR-16 (0.5 m inter-rows) with a final density of 16 plants per linear meter. <a href="http://link.springer.com/article/10.1007/s40858-015-0052-6">Almeida et al., (2015)</a></em></p>
+</blockquote>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">tillage &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;conventional&quot;</span>, <span class="st">&quot;no-tillage&quot;</span>)
+rcbd1 &lt;-<span class="st"> </span><span class="kw">design.rcbd</span>(tillage, <span class="dv">4</span>, <span class="dt">serie =</span> <span class="dv">0</span>, <span class="dv">1000</span>, <span class="st">&quot;Wichmann-Hill&quot;</span>)</code></pre></div>
+</div>
+</div>
+<div id="experimento-fatorial" class="section level2">
+<h2><span class="header-section-number">6.2</span> Experimento fatorial</h2>
+<div id="inteiramente-casualizado-1" class="section level3">
+<h3><span class="header-section-number">6.2.1</span> Inteiramente casualizado</h3>
+<p>Nesse caso, a alocação das repetições dos tratamentos que resultam da interação entre dois fatores é feita de maneira aleatória, sem controle local. O nome da função no <code>agricolae</code> é <code>design.ab</code>.</p>
+<p><strong>Exercício</strong></p>
+<p>Gera um delineamento segundo a descrição abaixo.</p>
+<blockquote>
+<p><em> Two 2 × 4 factorial experiments consisting of two cultivars (BR-18 and BRS-229) and the inducers (ASM, AJ and ET) plus distilled water (control treatment) were arranged in a completely randomized design, with four replications. Each experimental unit consisted of one plastic container with two plants. Fonte: <a href="http://www.scielo.br/scielo.php?script=sci_arttext&amp;pid=S1982-56762014000300006">Rios et al. (2014)</a> </em>.</p>
+</blockquote>
+<p><strong>Passos da análise</strong></p>
+<ul>
+<li>Gera a ordem de alocação dos tratamentos</li>
+<li>Cria um data.frame com cultivar, inducer e repetição extraído da lista</li>
+<li>Cria um vetor com a interaçao para criar um código interpretável da parcela</li>
+<li>Gera uma matrix com 3 colunas, uma para cada linha na bancada de uma casa de vegetação</li>
+<li>Transforma de matrix para data.frame</li>
+<li>Muda o nome das colunas para “linha 1”, “linha 2”, etc.</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># 2 cultivares e três indutores e quatro repetições</span>
+trt &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">2</span>,<span class="dv">3</span>)
+fat1 &lt;-<span class="st"> </span><span class="kw">design.ab</span>(trt, <span class="dt">r =</span> <span class="dv">4</span>, <span class="dt">design =</span> <span class="st">&quot;crd&quot;</span>, <span class="dt">serie =</span> <span class="dv">1</span>)
+
+dat1 &lt;-<span class="st"> </span><span class="kw">data.frame</span>(fat1<span class="op">$</span>book<span class="op">$</span>plots, fat1<span class="op">$</span>book<span class="op">$</span>A, fat1<span class="op">$</span>book<span class="op">$</span>B, fat1<span class="op">$</span>book<span class="op">$</span>r)
+dat1<span class="op">$</span>plot2 &lt;-<span class="st"> </span><span class="kw">interaction</span>(dat1[ ,<span class="dv">2</span><span class="op">:</span><span class="dv">4</span>], <span class="dt">sep =</span> <span class="st">&quot;_&quot;</span>)
+
+m1 &lt;-<span class="st"> </span><span class="kw">matrix</span>(dat1<span class="op">$</span>plot2, <span class="dt">ncol=</span><span class="dv">3</span>)
+m2 &lt;-<span class="st"> </span><span class="kw">as.data.frame</span>(m1)
+<span class="kw">colnames</span>(m2) &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;linha 1&quot;</span>, <span class="st">&quot;linha 2&quot;</span>, <span class="st">&quot;linha 3&quot;</span>)
+m2</code></pre></div>
+<pre><code>##   linha 1 linha 2 linha 3
+## 1   2_3_1   1_2_3   2_1_3
+## 2   2_2_1   1_3_3   2_1_4
+## 3   1_1_1   2_1_1   2_2_2
+## 4   1_3_1   2_1_2   2_2_3
+## 5   2_3_2   1_1_2   1_3_4
+## 6   1_2_1   1_1_3   1_2_4
+## 7   1_3_2   2_3_3   2_2_4
+## 8   1_2_2   2_3_4   1_1_4</code></pre>
+</div>
+<div id="parcela-dividida" class="section level3">
+<h3><span class="header-section-number">6.2.2</span> Parcela dividida</h3>
+<p>Delineamentos em parcelas subdivididas tem um arranjo do tipo fatorial pois um segundo fator, normalmente em menor número de níveis, é aleatorizado na mesma parcela de um fator principal. Sua vantagem é a diminuição do número de parcelas. No <code>agricolae</code> o nome da função é <code>design.split</code>.</p>
+<p><strong>Exercício</strong></p>
+<p>Experimento de campo para testar o efeito da interação híbridos de milho de método de inoculação.</p>
+<blockquote>
+<p><em> Trials were arranged in a 14 × 2 factorial experiment in a split-plot design with four replications. Hybrids (0F53HX, 30F53YH, 30K64HNSR, 30S31H, 30S31YH, BG7049H, Dow2B707, P1630H, P30F53YH, P30S31HR, P32R48H, P3646H, STATUS VIP and, STATUS VIP3) were randomly assigned to the main plots, which consisted of four rows. Plots were split into two sub-plots that were randomly assigned to either the silk channel or the pin inoculation treatment. Fonte: <a href="http://link.springer.com/article/10.1007%2Fs40858-015-0050-8">Nerbass et al. (2015)</a> </em></p>
+</blockquote>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># parcela principal</span>
+hybrids &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;0F53HX&quot;</span>, <span class="st">&quot;30F53YH&quot;</span>, <span class="st">&quot;30K64HNSR&quot;</span>,<span class="st">&quot;30S31H&quot;</span>, <span class="st">&quot;30S31YH&quot;</span>, <span class="st">&quot;BG7049H&quot;</span>, <span class="st">&quot;Dow2B707&quot;</span>, <span class="st">&quot;P1630H&quot;</span>, <span class="st">&quot;P30F53YH&quot;</span>, <span class="st">&quot;P30S31HR&quot;</span>, <span class="st">&quot;P32R48H&quot;</span>, <span class="st">&quot;P3646H&quot;</span>, <span class="st">&quot;STATUS VIP&quot;</span>, <span class="st">&quot;STATUS VIP3&quot;</span>) 
+<span class="co">#subparcela</span>
+inoculation &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;silk&quot;</span>, <span class="st">&quot;pin&quot;</span>) 
+sp1 &lt;-<span class="st"> </span><span class="kw">design.split</span>(hybrids, inoculation, 
+                    <span class="dt">design=</span><span class="st">&quot;crd&quot;</span>, <span class="dt">r =</span> <span class="dv">4</span>, <span class="dt">serie =</span> <span class="dv">0</span>)
+<span class="kw">head</span>(sp1<span class="op">$</span>book, <span class="dv">10</span>) <span class="co"># mostra 10 primeiras parcelas</span></code></pre></div>
+<pre><code>##    plots splots r     hybrids inoculation
+## 1      1      1 1   30K64HNSR        silk
+## 2      1      2 1   30K64HNSR         pin
+## 3      2      1 1      P3646H        silk
+## 4      2      2 1      P3646H         pin
+## 5      3      1 1      30S31H        silk
+## 6      3      2 1      30S31H         pin
+## 7      4      1 1     P32R48H         pin
+## 8      4      2 1     P32R48H        silk
+## 9      5      1 1 STATUS VIP3        silk
+## 10     5      2 1 STATUS VIP3         pin</code></pre>
+<p>Note abaixo que o delineamento escolhido foi inteiramente casualizado, onde a repetição de cada híbrido é sorteado em qualquer parcela da área experimental.</p>
+</div>
+<div id="blocos-casualizados-1" class="section level3">
+<h3><span class="header-section-number">6.2.3</span> Blocos casualizados</h3>
+<p>No exemplo anterior, onde apenas o fator manejo do solo (conventional or non-tillage) havia sido testado, adiciona um novo fator, cultivar, com 5 níveis e refaz o delineamento agora em blocos casualizados completos.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">trt&lt;-<span class="kw">c</span>(<span class="dv">2</span>,<span class="dv">5</span>) <span class="co"># fatorial 2 A = 2 níveis de manejo e B = 5 cultivares</span>
+rcbd2 &lt;-<span class="st"> </span><span class="kw">design.ab</span>(trt, <span class="dt">r =</span> <span class="dv">4</span>, <span class="dt">design =</span> <span class="st">&quot;rcbd&quot;</span>, <span class="dt">serie =</span> <span class="dv">2</span>)
+<span class="kw">head</span>(rcbd2<span class="op">$</span>book, <span class="dv">15</span>)</code></pre></div>
+<pre><code>##    plots block A B
+## 1    101     1 2 5
+## 2    102     1 2 2
+## 3    103     1 1 3
+## 4    104     1 2 1
+## 5    105     1 1 4
+## 6    106     1 1 5
+## 7    107     1 1 1
+## 8    108     1 2 3
+## 9    109     1 1 2
+## 10   110     1 2 4
+## 11   111     2 2 5
+## 12   112     2 1 4
+## 13   113     2 2 1
+## 14   114     2 2 2
+## 15   115     2 1 1</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># A diferença foi o atributo design rcbd</span></code></pre></div>
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="sumarizacao-dos-dados.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/05-delineamentos.Rmd",
+"text": "Edit"
+},
+"download": ["bookdown-demo.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

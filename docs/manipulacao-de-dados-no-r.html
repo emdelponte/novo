@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>FIP 606</title>
+  <meta name="description" content="Disciplina da Pós-graduacão em Fitopatologia da UFV">
+  <meta name="generator" content="bookdown 0.7 and GitBook 2.6.7">
+
+  <meta property="og:title" content="FIP 606" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="Disciplina da Pós-graduacão em Fitopatologia da UFV" />
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="FIP 606" />
+  
+  <meta name="twitter:description" content="Disciplina da Pós-graduacão em Fitopatologia da UFV" />
+  
+
+<meta name="author" content="Prof. Emerson M. Del Ponte">
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="visualizacao-de-dados.html">
+<link rel="next" href="sumarizacao-dos-dados.html">
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./index.html">FIP 606 </a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Prefácio</a></li>
+<li class="chapter" data-level="1" data-path="introducao.html"><a href="introducao.html"><i class="fa fa-check"></i><b>1</b> Introdução</a><ul>
+<li class="chapter" data-level="1.1" data-path="introducao.html"><a href="introducao.html#estatistica-e-computacao"><i class="fa fa-check"></i><b>1.1</b> Estatística e computação</a></li>
+<li class="chapter" data-level="1.2" data-path="introducao.html"><a href="introducao.html#a-pesquisa-reproduzivel"><i class="fa fa-check"></i><b>1.2</b> A pesquisa reproduzível</a></li>
+<li class="chapter" data-level="1.3" data-path="introducao.html"><a href="introducao.html#boas-praticas"><i class="fa fa-check"></i><b>1.3</b> Boas práticas</a></li>
+<li class="chapter" data-level="1.4" data-path="introducao.html"><a href="introducao.html#sugestao-de-leituras"><i class="fa fa-check"></i><b>1.4</b> Sugestão de leituras</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="carregando-os-dados-no-ambiente.html"><a href="carregando-os-dados-no-ambiente.html"><i class="fa fa-check"></i><b>2</b> Carregando os dados no ambiente</a><ul>
+<li class="chapter" data-level="2.1" data-path="carregando-os-dados-no-ambiente.html"><a href="carregando-os-dados-no-ambiente.html#usando-o-argumento-text"><i class="fa fa-check"></i><b>2.1</b> Usando o argumento text</a></li>
+<li class="chapter" data-level="2.2" data-path="carregando-os-dados-no-ambiente.html"><a href="carregando-os-dados-no-ambiente.html#importando-do-excel"><i class="fa fa-check"></i><b>2.2</b> Importando do excel</a></li>
+<li class="chapter" data-level="2.3" data-path="carregando-os-dados-no-ambiente.html"><a href="carregando-os-dados-no-ambiente.html#dados-em-outros-arquivos"><i class="fa fa-check"></i><b>2.3</b> Dados em outros arquivos</a></li>
+<li class="chapter" data-level="2.4" data-path="carregando-os-dados-no-ambiente.html"><a href="carregando-os-dados-no-ambiente.html#dados-em-pacotes"><i class="fa fa-check"></i><b>2.4</b> Dados em pacotes</a></li>
+<li class="chapter" data-level="2.5" data-path="carregando-os-dados-no-ambiente.html"><a href="carregando-os-dados-no-ambiente.html#dados-de-pacotes"><i class="fa fa-check"></i><b>2.5</b> Dados de pacotes</a></li>
+<li class="chapter" data-level="2.6" data-path="carregando-os-dados-no-ambiente.html"><a href="carregando-os-dados-no-ambiente.html#referencias-na-web"><i class="fa fa-check"></i><b>2.6</b> Referências na web</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="visualizacao-de-dados.html"><a href="visualizacao-de-dados.html"><i class="fa fa-check"></i><b>3</b> Visualização de dados</a><ul>
+<li class="chapter" data-level="3.1" data-path="visualizacao-de-dados.html"><a href="visualizacao-de-dados.html#dados-de-levantamento"><i class="fa fa-check"></i><b>3.1</b> Dados de levantamento</a></li>
+<li class="chapter" data-level="3.2" data-path="visualizacao-de-dados.html"><a href="visualizacao-de-dados.html#construindo-um-grafico"><i class="fa fa-check"></i><b>3.2</b> Construindo um gráfico</a></li>
+<li class="chapter" data-level="3.3" data-path="visualizacao-de-dados.html"><a href="visualizacao-de-dados.html#dados-categoricos"><i class="fa fa-check"></i><b>3.3</b> Dados categóricos</a></li>
+<li class="chapter" data-level="3.4" data-path="visualizacao-de-dados.html"><a href="visualizacao-de-dados.html#dados-continuos"><i class="fa fa-check"></i><b>3.4</b> Dados contínuos</a></li>
+<li class="chapter" data-level="3.5" data-path="visualizacao-de-dados.html"><a href="visualizacao-de-dados.html#continuos-x-categoricos"><i class="fa fa-check"></i><b>3.5</b> Contínuos x categóricos</a></li>
+<li class="chapter" data-level="3.6" data-path="visualizacao-de-dados.html"><a href="visualizacao-de-dados.html#duas-variaveis-continuas"><i class="fa fa-check"></i><b>3.6</b> Duas variáveis contínuas</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="manipulacao-de-dados-no-r.html"><a href="manipulacao-de-dados-no-r.html"><i class="fa fa-check"></i><b>4</b> Manipulação de dados no R</a><ul>
+<li class="chapter" data-level="4.1" data-path="manipulacao-de-dados-no-r.html"><a href="manipulacao-de-dados-no-r.html#conjunto-de-dados"><i class="fa fa-check"></i><b>4.1</b> Conjunto de dados</a></li>
+<li class="chapter" data-level="4.2" data-path="manipulacao-de-dados-no-r.html"><a href="manipulacao-de-dados-no-r.html#selecionando-colunas"><i class="fa fa-check"></i><b>4.2</b> Selecionando colunas</a></li>
+<li class="chapter" data-level="4.3" data-path="manipulacao-de-dados-no-r.html"><a href="manipulacao-de-dados-no-r.html#selecionando-linhas"><i class="fa fa-check"></i><b>4.3</b> Selecionando linhas</a></li>
+<li class="chapter" data-level="4.4" data-path="manipulacao-de-dados-no-r.html"><a href="manipulacao-de-dados-no-r.html#renomeando-variaveis"><i class="fa fa-check"></i><b>4.4</b> Renomeando variáveis</a></li>
+<li class="chapter" data-level="4.5" data-path="manipulacao-de-dados-no-r.html"><a href="manipulacao-de-dados-no-r.html#adicionando-variaveis"><i class="fa fa-check"></i><b>4.5</b> Adicionando variáveis</a></li>
+<li class="chapter" data-level="4.6" data-path="manipulacao-de-dados-no-r.html"><a href="manipulacao-de-dados-no-r.html#removendo-variaveis"><i class="fa fa-check"></i><b>4.6</b> Removendo variáveis</a></li>
+<li class="chapter" data-level="4.7" data-path="manipulacao-de-dados-no-r.html"><a href="manipulacao-de-dados-no-r.html#reordenando-as-linhas"><i class="fa fa-check"></i><b>4.7</b> Reordenando as linhas</a></li>
+<li class="chapter" data-level="4.8" data-path="manipulacao-de-dados-no-r.html"><a href="manipulacao-de-dados-no-r.html#encontrar-duplicatas"><i class="fa fa-check"></i><b>4.8</b> Encontrar duplicatas</a></li>
+<li class="chapter" data-level="4.9" data-path="manipulacao-de-dados-no-r.html"><a href="manipulacao-de-dados-no-r.html#renomeando-niveis"><i class="fa fa-check"></i><b>4.9</b> Renomeando níveis</a></li>
+<li class="chapter" data-level="4.10" data-path="manipulacao-de-dados-no-r.html"><a href="manipulacao-de-dados-no-r.html#salvando-arquivo"><i class="fa fa-check"></i><b>4.10</b> Salvando arquivo</a></li>
+<li class="chapter" data-level="4.11" data-path="manipulacao-de-dados-no-r.html"><a href="manipulacao-de-dados-no-r.html#transposicao"><i class="fa fa-check"></i><b>4.11</b> Transposição</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="sumarizacao-dos-dados.html"><a href="sumarizacao-dos-dados.html"><i class="fa fa-check"></i><b>5</b> Sumarização dos dados</a><ul>
+<li class="chapter" data-level="5.1" data-path="sumarizacao-dos-dados.html"><a href="sumarizacao-dos-dados.html#conjunto-de-dados-1"><i class="fa fa-check"></i><b>5.1</b> Conjunto de dados</a></li>
+<li class="chapter" data-level="5.2" data-path="sumarizacao-dos-dados.html"><a href="sumarizacao-dos-dados.html#dados-categoricos-1"><i class="fa fa-check"></i><b>5.2</b> Dados categóricos</a></li>
+<li class="chapter" data-level="5.3" data-path="sumarizacao-dos-dados.html"><a href="sumarizacao-dos-dados.html#dados-continuos-1"><i class="fa fa-check"></i><b>5.3</b> Dados contínuos</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="delineamentos-experimentais.html"><a href="delineamentos-experimentais.html"><i class="fa fa-check"></i><b>6</b> Delineamentos experimentais</a><ul>
+<li class="chapter" data-level="6.1" data-path="delineamentos-experimentais.html"><a href="delineamentos-experimentais.html#experimento-simples"><i class="fa fa-check"></i><b>6.1</b> Experimento simples</a><ul>
+<li class="chapter" data-level="6.1.1" data-path="delineamentos-experimentais.html"><a href="delineamentos-experimentais.html#inteiramente-casualizado"><i class="fa fa-check"></i><b>6.1.1</b> Inteiramente casualizado</a></li>
+<li class="chapter" data-level="6.1.2" data-path="delineamentos-experimentais.html"><a href="delineamentos-experimentais.html#blocos-casualizados"><i class="fa fa-check"></i><b>6.1.2</b> Blocos casualizados</a></li>
+</ul></li>
+<li class="chapter" data-level="6.2" data-path="delineamentos-experimentais.html"><a href="delineamentos-experimentais.html#experimento-fatorial"><i class="fa fa-check"></i><b>6.2</b> Experimento fatorial</a><ul>
+<li class="chapter" data-level="6.2.1" data-path="delineamentos-experimentais.html"><a href="delineamentos-experimentais.html#inteiramente-casualizado-1"><i class="fa fa-check"></i><b>6.2.1</b> Inteiramente casualizado</a></li>
+<li class="chapter" data-level="6.2.2" data-path="delineamentos-experimentais.html"><a href="delineamentos-experimentais.html#parcela-dividida"><i class="fa fa-check"></i><b>6.2.2</b> Parcela dividida</a></li>
+<li class="chapter" data-level="6.2.3" data-path="delineamentos-experimentais.html"><a href="delineamentos-experimentais.html#blocos-casualizados-1"><i class="fa fa-check"></i><b>6.2.3</b> Blocos casualizados</a></li>
+</ul></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">FIP 606</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="manipulacao-de-dados-no-r" class="section level1">
+<h1><span class="header-section-number">Capítulo 4</span> Manipulação de dados no R</h1>
+<p>Com os dados carregados no ambiente, seja em vetores, tabelas e data frames (essa a forma mais comum de armazenar os dados), podemos fazer várias operações que envolvem filter, selecionar, rearranjar, renomear, transformar, filtrar, dentre outras ações.</p>
+<div id="conjunto-de-dados" class="section level2">
+<h2><span class="header-section-number">4.1</span> Conjunto de dados</h2>
+<p>Nesta seção, iremos trabalhar com um conjunto de dados com informações sobre isolados de <em>Fusarium graminearum</em> obtidos de espigas de trigo com sintomas coletadas em visitas à lavouras nos estados do RS e PR. Diversas informações foram obtidas para cada lavoura (local, ano, latitude, longitude, etc), sobre a doença (incidencia e severidade) e da identificação do isolado (espécie e genótipo). Os dados foram informados em uma planilha excel e o arquivo que será trabalho foi nomeado como “survey2.csv”. Vamos carregar esse conjunto de dados no ambiente e atribuir a um data frame survey2.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(readr)
+survey2 &lt;-<span class="st"> </span><span class="kw">read_csv</span> (<span class="st">&quot;data/survey2.csv&quot;</span>)
+
+<span class="kw">library</span>(dplyr)
+<span class="co"># A função glimpse é similar à função str do R base</span>
+<span class="kw">glimpse</span>(survey2) <span class="co"># mostra todas as variáveis, uma em cada linha</span></code></pre></div>
+<pre><code>## Observations: 671
+## Variables: 11
+## $ field    &lt;dbl&gt; 25, 25, 25, 25, 25, 26, 26, 26, 26, 36, 48, 49, 49, 4...
+## $ year     &lt;dbl&gt; 2010, 2010, 2010, 2010, 2010, 2010, 2010, 2010, 2010,...
+## $ location &lt;chr&gt; &quot;Agua Santa&quot;, &quot;Agua Santa&quot;, &quot;Agua Santa&quot;, &quot;Agua Santa...
+## $ state    &lt;chr&gt; &quot;RS&quot;, &quot;RS&quot;, &quot;RS&quot;, &quot;RS&quot;, &quot;RS&quot;, &quot;RS&quot;, &quot;RS&quot;, &quot;RS&quot;, &quot;RS&quot;,...
+## $ lat      &lt;dbl&gt; -28.30617, -28.30617, -28.28964, -28.28964, -28.28964...
+## $ long     &lt;dbl&gt; -52.08281, -52.08281, -51.97308, -51.97308, -51.97308...
+## $ residue  &lt;chr&gt; &quot;soybean&quot;, &quot;soybean&quot;, &quot;soybean&quot;, &quot;soybean&quot;, &quot;soybean&quot;...
+## $ inc      &lt;dbl&gt; 68.24, 68.24, 68.24, 68.24, 68.24, 34.00, 34.00, 34.0...
+## $ sev      &lt;dbl&gt; 9.47, 9.47, 9.47, 9.47, 9.47, 3.73, 3.73, 3.73, 3.73,...
+## $ species  &lt;chr&gt; &quot;Fgra&quot;, &quot;Fgra&quot;, &quot;Fgra&quot;, &quot;Fgra&quot;, &quot;Fgra&quot;, &quot;Fgra&quot;, &quot;Fgra...
+## $ genotype &lt;chr&gt; &quot;15-ADON&quot;, &quot;15-ADON&quot;, &quot;15-ADON&quot;, &quot;15-ADON&quot;, &quot;15-ADON&quot;...</code></pre>
+</div>
+<div id="selecionando-colunas" class="section level2">
+<h2><span class="header-section-number">4.2</span> Selecionando colunas</h2>
+<p>Eventualmente queremos trabalhar com apenas algumas variáveis, que são armazenadas em um novo data frame. No R base, a seleção pode ser feita por argumentos para seleção de colunas pelo nome das mesmas. Uma possibilidade é criar um vetor “filtro” com o nome das colunas que queremos selecionar e atribuir esse vetor à um novo data frame.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># seleciona as três colunas conforme abaixo</span>
+filtro &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;field&quot;</span>, <span class="st">&quot;location&quot;</span>, <span class="st">&quot;species&quot;</span>)
+
+<span class="co"># usando os colchetes, seleciona as variáveis do data frame survey2</span>
+survey3 &lt;-<span class="st"> </span>survey2[filtro]
+
+<span class="co"># visualiza o novo data frame</span>
+<span class="kw">glimpse</span>(survey3)</code></pre></div>
+<pre><code>## Observations: 671
+## Variables: 3
+## $ field    &lt;dbl&gt; 25, 25, 25, 25, 25, 26, 26, 26, 26, 36, 48, 49, 49, 4...
+## $ location &lt;chr&gt; &quot;Agua Santa&quot;, &quot;Agua Santa&quot;, &quot;Agua Santa&quot;, &quot;Agua Santa...
+## $ species  &lt;chr&gt; &quot;Fgra&quot;, &quot;Fgra&quot;, &quot;Fgra&quot;, &quot;Fgra&quot;, &quot;Fgra&quot;, &quot;Fgra&quot;, &quot;Fgra...</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># outra forma seria diretamente pelo número da coluna</span>
+survey3a &lt;-<span class="st"> </span>survey2[<span class="kw">c</span>(<span class="dv">2</span><span class="op">:</span><span class="dv">3</span>, <span class="dv">10</span>)]
+<span class="kw">glimpse</span>(survey3a) </code></pre></div>
+<pre><code>## Observations: 671
+## Variables: 3
+## $ year     &lt;dbl&gt; 2010, 2010, 2010, 2010, 2010, 2010, 2010, 2010, 2010,...
+## $ location &lt;chr&gt; &quot;Agua Santa&quot;, &quot;Agua Santa&quot;, &quot;Agua Santa&quot;, &quot;Agua Santa...
+## $ species  &lt;chr&gt; &quot;Fgra&quot;, &quot;Fgra&quot;, &quot;Fgra&quot;, &quot;Fgra&quot;, &quot;Fgra&quot;, &quot;Fgra&quot;, &quot;Fgra...</code></pre>
+<p>No pacote dplyr, a função <code>select</code> permite selecionar as colunas pelo nome. Veja em <code>?select</code> as várias funções especiais de seleção.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">survey4 &lt;-<span class="st"> </span><span class="kw">select</span>(survey2, year, location, species)
+survey4 &lt;-<span class="st"> </span><span class="kw">select</span>(survey2, <span class="kw">c</span>(<span class="dv">2</span><span class="op">:</span><span class="dv">3</span>, <span class="dv">10</span>)) <span class="co"># pelo número das colunas</span>
+
+<span class="kw">glimpse</span>(survey4) <span class="co"># vai aparecer em um formato mais compacto</span></code></pre></div>
+<pre><code>## Observations: 671
+## Variables: 3
+## $ year     &lt;dbl&gt; 2010, 2010, 2010, 2010, 2010, 2010, 2010, 2010, 2010,...
+## $ location &lt;chr&gt; &quot;Agua Santa&quot;, &quot;Agua Santa&quot;, &quot;Agua Santa&quot;, &quot;Agua Santa...
+## $ species  &lt;chr&gt; &quot;Fgra&quot;, &quot;Fgra&quot;, &quot;Fgra&quot;, &quot;Fgra&quot;, &quot;Fgra&quot;, &quot;Fgra&quot;, &quot;Fgra...</code></pre>
+<p>A seleção também pode ser feita pela eliminação de algumas variáveis e preservação das demais. Vamos selecionar do data frame <code>survey4</code> todas as variáveis menos “species”. Para isso, é colocado o sinal de menos na frente da coluna.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">select</span>(survey4, <span class="op">-</span>species)</code></pre></div>
+<pre><code>## # A tibble: 671 x 2
+##     year location  
+##    &lt;dbl&gt; &lt;chr&gt;     
+##  1  2010 Agua Santa
+##  2  2010 Agua Santa
+##  3  2010 Agua Santa
+##  4  2010 Agua Santa
+##  5  2010 Agua Santa
+##  6  2010 Agua Santa
+##  7  2010 Agua Santa
+##  8  2010 Agua Santa
+##  9  2010 Agua Santa
+## 10  2011 Agua Santa
+## # ... with 661 more rows</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># elimina várias colunas em um intervalo sequencial </span>
+<span class="kw">select</span>(survey2, <span class="op">-</span><span class="kw">c</span>(residue<span class="op">:</span>genotype)) </code></pre></div>
+<pre><code>## # A tibble: 671 x 6
+##    field  year location   state   lat  long
+##    &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt;      &lt;chr&gt; &lt;dbl&gt; &lt;dbl&gt;
+##  1    25  2010 Agua Santa RS    -28.3 -52.1
+##  2    25  2010 Agua Santa RS    -28.3 -52.1
+##  3    25  2010 Agua Santa RS    -28.3 -52.0
+##  4    25  2010 Agua Santa RS    -28.3 -52.0
+##  5    25  2010 Agua Santa RS    -28.3 -52.0
+##  6    26  2010 Agua Santa RS    -28.7 -51.2
+##  7    26  2010 Agua Santa RS    -28.7 -51.2
+##  8    26  2010 Agua Santa RS    -28.7 -51.2
+##  9    26  2010 Agua Santa RS    -28.3 -51.5
+## 10    36  2011 Agua Santa RS    -28.4 -53.0
+## # ... with 661 more rows</code></pre>
+</div>
+<div id="selecionando-linhas" class="section level2">
+<h2><span class="header-section-number">4.3</span> Selecionando linhas</h2>
+<p>No pacote dplyr a função <code>filter</code> permite selecionar linhas segundo critérios. No data frame <code>survey2</code> vamos fazer algumas operações para selecionar e contar o número de casos segundo algum critério de filtro.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># filtra somente as linhas em que a incidência é maior que 80</span>
+<span class="kw">filter</span>(survey2, inc <span class="op">&gt;</span><span class="st"> </span><span class="dv">70</span>) </code></pre></div>
+<pre><code>## # A tibble: 18 x 11
+##    field  year location state   lat  long residue   inc   sev species
+##    &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt;    &lt;chr&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt;   &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt;  
+##  1     2  2010 Carazin~ RS    -28.3 -52.7 soybean  72.5 14.3  Fgra   
+##  2     2  2010 Carazin~ RS    -28.3 -52.8 soybean  72.5 14.3  Fgra   
+##  3     2  2010 Carazin~ RS    -28.3 -52.8 soybean  72.5 14.3  Fgra   
+##  4     2  2010 Carazin~ RS    -28.3 -52.8 soybean  72.5 14.3  Fgra   
+##  5     6  2010 Carazin~ RS    -28.3 -51.7 soybean  70.7  8.13 Fasi   
+##  6     6  2010 Carazin~ RS    -28.3 -52.9 soybean  70.7  8.13 Fgra   
+##  7     6  2010 Carazin~ RS    -28.4 -52.9 soybean  70.7  8.13 Fgra   
+##  8     6  2010 Carazin~ RS    -28.4 -52.9 soybean  70.7  8.13 Fgra   
+##  9     6  2010 Carazin~ RS    -28.4 -52.9 soybean  70.7  8.13 Fgra   
+## 10    13  2009 Condor   RS    -27.6 -53.3 soybean  70.5 12.8  Fgra   
+## 11    13  2009 Condor   RS    -27.6 -53.3 soybean  70.5 12.8  Fgra   
+## 12    13  2009 Condor   RS    -27.6 -53.3 soybean  70.5 12.8  Fgra   
+## 13    13  2009 Condor   RS    -27.6 -53.3 soybean  70.5 12.8  Fgra   
+## 14    24  2009 Lageado~ RS    -28.1 -52.2 soybean  71    5.22 Fgra   
+## 15    24  2009 Lageado~ RS    -28.1 -52.2 soybean  71    5.22 Fgra   
+## 16    15  2009 Palmeir~ RS    -27.8 -53.4 corn     90.0 18.5  Fgra   
+## 17    15  2009 Palmeir~ RS    -27.8 -53.4 corn     90.0 18.5  Fgra   
+## 18    15  2009 Palmeir~ RS    -27.8 -53.4 corn     90.0 18.5  Fgra   
+## # ... with 1 more variable: genotype &lt;chr&gt;</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># retorna o número de casos que atendem ao critério</span>
+<span class="kw">count</span>(<span class="kw">filter</span>(survey2, inc <span class="op">&gt;</span><span class="st"> </span><span class="dv">70</span>)) </code></pre></div>
+<pre><code>## # A tibble: 1 x 1
+##       n
+##   &lt;int&gt;
+## 1    18</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># pode-se criar um dataframe</span>
+survey_inc75 &lt;-<span class="st"> </span><span class="kw">filter</span>(survey2, inc <span class="op">&gt;</span><span class="st"> </span><span class="dv">75</span>) 
+
+<span class="co"># múltiplos argumentos de seleção</span>
+<span class="kw">filter</span>(survey2, inc <span class="op">&gt;</span><span class="st"> </span><span class="dv">50</span> <span class="op">&amp;</span><span class="st"> </span>sev <span class="op">&gt;</span><span class="st"> </span><span class="dv">10</span>)</code></pre></div>
+<pre><code>## # A tibble: 24 x 11
+##    field  year location state   lat  long residue   inc   sev species
+##    &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt;    &lt;chr&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt;   &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt;  
+##  1     2  2010 Carazin~ RS    -28.3 -52.7 soybean  72.5  14.3 Fgra   
+##  2     2  2010 Carazin~ RS    -28.3 -52.8 soybean  72.5  14.3 Fgra   
+##  3     2  2010 Carazin~ RS    -28.3 -52.8 soybean  72.5  14.3 Fgra   
+##  4     2  2010 Carazin~ RS    -28.3 -52.8 soybean  72.5  14.3 Fgra   
+##  5     3  2010 Carazin~ RS    -28.3 -52.8 soybean  67    18.6 Fgra   
+##  6     3  2010 Carazin~ RS    -28.3 -52.8 soybean  67    18.6 Fgra   
+##  7     3  2010 Carazin~ RS    -28.3 -52.8 soybean  67    18.6 Fgra   
+##  8     3  2010 Carazin~ RS    -28.3 -52.8 soybean  67    18.6 Fgra   
+##  9     3  2010 Carazin~ RS    -28.3 -52.8 soybean  67    18.6 Fgra   
+## 10    13  2009 Condor   RS    -27.6 -53.3 soybean  70.5  12.8 Fgra   
+## # ... with 14 more rows, and 1 more variable: genotype &lt;chr&gt;</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># note abaixo que o sinal de igual é ==</span>
+<span class="kw">filter</span>(survey2, location <span class="op">==</span><span class="st"> &quot;Carazinho&quot;</span> <span class="op">&amp;</span><span class="st"> </span>year <span class="op">==</span><span class="st"> &quot;2010&quot;</span>)</code></pre></div>
+<pre><code>## # A tibble: 28 x 11
+##    field  year location state   lat  long residue   inc   sev species
+##    &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt;    &lt;chr&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt;   &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt;  
+##  1     2  2010 Carazin~ RS    -28.3 -52.7 soybean  72.5  14.3 Fgra   
+##  2     2  2010 Carazin~ RS    -28.3 -52.8 soybean  72.5  14.3 Fgra   
+##  3     2  2010 Carazin~ RS    -28.3 -52.8 soybean  72.5  14.3 Fgra   
+##  4     2  2010 Carazin~ RS    -28.3 -52.8 soybean  72.5  14.3 Fgra   
+##  5     3  2010 Carazin~ RS    -28.3 -52.8 soybean  67    18.6 Fgra   
+##  6     3  2010 Carazin~ RS    -28.3 -52.8 soybean  67    18.6 Fgra   
+##  7     3  2010 Carazin~ RS    -28.3 -52.8 soybean  67    18.6 Fgra   
+##  8     3  2010 Carazin~ RS    -28.3 -52.8 soybean  67    18.6 Fgra   
+##  9     3  2010 Carazin~ RS    -28.3 -52.8 soybean  67    18.6 Fgra   
+## 10     4  2010 Carazin~ RS    -28.3 -51.4 soybean  43.5  17.5 Fcor   
+## # ... with 18 more rows, and 1 more variable: genotype &lt;chr&gt;</code></pre>
+</div>
+<div id="renomeando-variaveis" class="section level2">
+<h2><span class="header-section-number">4.4</span> Renomeando variáveis</h2>
+<p>Conforme já visto, a função <code>fix</code> permite abrir o conjunto em um editor visual para fazer alterações, inclusive modificar o nome das colunas. Vamos traduzir o nome das variáveis no dataframe <code>survey3</code>.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">colnames</span>(survey3)</code></pre></div>
+<pre><code>## [1] &quot;field&quot;    &quot;location&quot; &quot;species&quot;</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># fix(survey3)</span>
+<span class="kw">glimpse</span>(survey3)</code></pre></div>
+<pre><code>## Observations: 671
+## Variables: 3
+## $ field    &lt;dbl&gt; 25, 25, 25, 25, 25, 26, 26, 26, 26, 36, 48, 49, 49, 4...
+## $ location &lt;chr&gt; &quot;Agua Santa&quot;, &quot;Agua Santa&quot;, &quot;Agua Santa&quot;, &quot;Agua Santa...
+## $ species  &lt;chr&gt; &quot;Fgra&quot;, &quot;Fgra&quot;, &quot;Fgra&quot;, &quot;Fgra&quot;, &quot;Fgra&quot;, &quot;Fgra&quot;, &quot;Fgra...</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># verifica se o nome foi alterado</span>
+<span class="kw">colnames</span>(survey3)</code></pre></div>
+<pre><code>## [1] &quot;field&quot;    &quot;location&quot; &quot;species&quot;</code></pre>
+<p>No R base, a troca de nomes pode ser feita para todas as variáveis, desde que informadas na mesma sequencia em que se apresentam no data frame.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">colnames</span>(survey2)</code></pre></div>
+<pre><code>##  [1] &quot;field&quot;    &quot;year&quot;     &quot;location&quot; &quot;state&quot;    &quot;lat&quot;      &quot;long&quot;    
+##  [7] &quot;residue&quot;  &quot;inc&quot;      &quot;sev&quot;      &quot;species&quot;  &quot;genotype&quot;</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">names</span>(survey2) &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;campo&quot;</span>,<span class="st">&quot;ano&quot;</span>,<span class="st">&quot;local&quot;</span>, <span class="st">&quot;estado&quot;</span>, <span class="st">&quot;lat&quot;</span>, <span class="st">&quot;long&quot;</span>, <span class="st">&quot;residuo&quot;</span>,<span class="st">&quot;inc&quot;</span>, <span class="st">&quot;sev&quot;</span>, <span class="st">&quot;especie&quot;</span>, <span class="st">&quot;genotipo&quot;</span>) 
+<span class="kw">colnames</span>(survey2)</code></pre></div>
+<pre><code>##  [1] &quot;campo&quot;    &quot;ano&quot;      &quot;local&quot;    &quot;estado&quot;   &quot;lat&quot;      &quot;long&quot;    
+##  [7] &quot;residuo&quot;  &quot;inc&quot;      &quot;sev&quot;      &quot;especie&quot;  &quot;genotipo&quot;</code></pre>
+<p>Pode-se também alterar apenas algumas variáveis, usando a função <code>names</code> do R base.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">names</span>(survey2)[<span class="kw">names</span>(survey2)<span class="op">==</span><span class="st">&quot;inc&quot;</span>] &lt;-<span class="st"> &quot;incidencia&quot;</span>
+<span class="kw">names</span>(survey2)[<span class="kw">names</span>(survey2)<span class="op">==</span><span class="st">&quot;sev&quot;</span>] &lt;-<span class="st"> &quot;severidade&quot;</span>
+<span class="kw">colnames</span>(survey2) <span class="co"># verifica</span></code></pre></div>
+<pre><code>##  [1] &quot;campo&quot;      &quot;ano&quot;        &quot;local&quot;      &quot;estado&quot;     &quot;lat&quot;       
+##  [6] &quot;long&quot;       &quot;residuo&quot;    &quot;incidencia&quot; &quot;severidade&quot; &quot;especie&quot;   
+## [11] &quot;genotipo&quot;</code></pre>
+<p>Alternativamente, no pacote <code>plyr</code> a função <code>rename</code> é mais intuitiva e simples do que a função <code>names</code>. Veja o exemplo abaixo como mudar o nome da variável genotipo para quimiotipo.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(plyr)
+survey2 &lt;-<span class="st"> </span><span class="kw">rename</span>(survey2, <span class="kw">c</span>(<span class="st">&quot;genotipo&quot;</span> =<span class="st"> &quot;quimiotipo&quot;</span>))</code></pre></div>
+</div>
+<div id="adicionando-variaveis" class="section level2">
+<h2><span class="header-section-number">4.5</span> Adicionando variáveis</h2>
+<p>No R base, a forma mais rápida de se adicionar uma variável é diretamente no dataframe usando o <code>$</code> após o nome do data frame. Abaixo, iremos criar uma variável que codifica cada isolado com um número sequencial.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># cria o vetor do tamanho do número de linhas (nrow) do dataframe survey2</span>
+index &lt;-<span class="st"> </span><span class="kw">seq</span>(<span class="dt">from =</span> <span class="dv">1</span>, <span class="dt">to =</span> <span class="kw">nrow</span>(survey2))
+<span class="kw">head</span>(index, <span class="dv">20</span>) <span class="co"># primeiras 20 linhas</span></code></pre></div>
+<pre><code>##  [1]  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">tail</span>(index)     <span class="co"># últimas 6 linhas</span></code></pre></div>
+<pre><code>## [1] 666 667 668 669 670 671</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># adiciona a variável ao data frame</span>
+survey2<span class="op">$</span>index &lt;-<span class="st"> </span>index
+<span class="kw">colnames</span>(survey2)</code></pre></div>
+<pre><code>##  [1] &quot;campo&quot;      &quot;ano&quot;        &quot;local&quot;      &quot;estado&quot;     &quot;lat&quot;       
+##  [6] &quot;long&quot;       &quot;residuo&quot;    &quot;incidencia&quot; &quot;severidade&quot; &quot;especie&quot;   
+## [11] &quot;quimiotipo&quot; &quot;index&quot;</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># também poderia ser feito diretamente sem criar o vetor antes</span>
+survey2<span class="op">$</span>index &lt;-<span class="st"> </span><span class="kw">seq</span>(<span class="dt">from =</span> <span class="dv">1</span>, <span class="dt">to =</span> <span class="kw">nrow</span>(survey2))
+
+<span class="co"># pode também ser usado para criar variáveis com transformações</span>
+<span class="co"># cria nova variável de incidência com nova escala</span>
+survey2<span class="op">$</span>incidencia2 &lt;-<span class="st"> </span>survey2<span class="op">$</span>incidencia<span class="op">/</span><span class="dv">100</span></code></pre></div>
+<p>Alternativamente, podemos usar a função <code>mutate</code> do pacote dplyr para acrescentar uma ou mais colunas.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">survey2 &lt;-<span class="st"> </span><span class="kw">mutate</span>(survey2, <span class="dt">incidencia3 =</span> incidencia2 <span class="op">*</span><span class="st"> </span><span class="dv">100</span>)
+<span class="kw">head</span>(survey2<span class="op">$</span>incidencia3)</code></pre></div>
+<pre><code>## [1] 68.24 68.24 68.24 68.24 68.24 34.00</code></pre>
+</div>
+<div id="removendo-variaveis" class="section level2">
+<h2><span class="header-section-number">4.6</span> Removendo variáveis</h2>
+<p>No R base, pode-se usar NULL ou <code>subset</code>. Veja os exemplos.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># removendo incidencia3</span>
+survey2<span class="op">$</span>incidencia3 &lt;-<span class="st"> </span><span class="ot">NULL</span>
+<span class="kw">glimpse</span>(survey2)</code></pre></div>
+<pre><code>## Observations: 671
+## Variables: 13
+## $ campo       &lt;dbl&gt; 25, 25, 25, 25, 25, 26, 26, 26, 26, 36, 48, 49, 49...
+## $ ano         &lt;dbl&gt; 2010, 2010, 2010, 2010, 2010, 2010, 2010, 2010, 20...
+## $ local       &lt;chr&gt; &quot;Agua Santa&quot;, &quot;Agua Santa&quot;, &quot;Agua Santa&quot;, &quot;Agua Sa...
+## $ estado      &lt;chr&gt; &quot;RS&quot;, &quot;RS&quot;, &quot;RS&quot;, &quot;RS&quot;, &quot;RS&quot;, &quot;RS&quot;, &quot;RS&quot;, &quot;RS&quot;, &quot;R...
+## $ lat         &lt;dbl&gt; -28.30617, -28.30617, -28.28964, -28.28964, -28.28...
+## $ long        &lt;dbl&gt; -52.08281, -52.08281, -51.97308, -51.97308, -51.97...
+## $ residuo     &lt;chr&gt; &quot;soybean&quot;, &quot;soybean&quot;, &quot;soybean&quot;, &quot;soybean&quot;, &quot;soybe...
+## $ incidencia  &lt;dbl&gt; 68.24, 68.24, 68.24, 68.24, 68.24, 34.00, 34.00, 3...
+## $ severidade  &lt;dbl&gt; 9.47, 9.47, 9.47, 9.47, 9.47, 3.73, 3.73, 3.73, 3....
+## $ especie     &lt;chr&gt; &quot;Fgra&quot;, &quot;Fgra&quot;, &quot;Fgra&quot;, &quot;Fgra&quot;, &quot;Fgra&quot;, &quot;Fgra&quot;, &quot;F...
+## $ quimiotipo  &lt;chr&gt; &quot;15-ADON&quot;, &quot;15-ADON&quot;, &quot;15-ADON&quot;, &quot;15-ADON&quot;, &quot;15-AD...
+## $ index       &lt;int&gt; 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15,...
+## $ incidencia2 &lt;dbl&gt; 0.6824, 0.6824, 0.6824, 0.6824, 0.6824, 0.3400, 0....</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># removendo incidencia2 com a função subset</span>
+survey2 &lt;-<span class="st"> </span><span class="kw">subset</span>(survey2, <span class="dt">select =</span> <span class="kw">c</span>(<span class="op">-</span>incidencia2))
+<span class="kw">glimpse</span>(survey2)</code></pre></div>
+<pre><code>## Observations: 671
+## Variables: 12
+## $ campo      &lt;dbl&gt; 25, 25, 25, 25, 25, 26, 26, 26, 26, 36, 48, 49, 49,...
+## $ ano        &lt;dbl&gt; 2010, 2010, 2010, 2010, 2010, 2010, 2010, 2010, 201...
+## $ local      &lt;chr&gt; &quot;Agua Santa&quot;, &quot;Agua Santa&quot;, &quot;Agua Santa&quot;, &quot;Agua San...
+## $ estado     &lt;chr&gt; &quot;RS&quot;, &quot;RS&quot;, &quot;RS&quot;, &quot;RS&quot;, &quot;RS&quot;, &quot;RS&quot;, &quot;RS&quot;, &quot;RS&quot;, &quot;RS...
+## $ lat        &lt;dbl&gt; -28.30617, -28.30617, -28.28964, -28.28964, -28.289...
+## $ long       &lt;dbl&gt; -52.08281, -52.08281, -51.97308, -51.97308, -51.973...
+## $ residuo    &lt;chr&gt; &quot;soybean&quot;, &quot;soybean&quot;, &quot;soybean&quot;, &quot;soybean&quot;, &quot;soybea...
+## $ incidencia &lt;dbl&gt; 68.24, 68.24, 68.24, 68.24, 68.24, 34.00, 34.00, 34...
+## $ severidade &lt;dbl&gt; 9.47, 9.47, 9.47, 9.47, 9.47, 3.73, 3.73, 3.73, 3.7...
+## $ especie    &lt;chr&gt; &quot;Fgra&quot;, &quot;Fgra&quot;, &quot;Fgra&quot;, &quot;Fgra&quot;, &quot;Fgra&quot;, &quot;Fgra&quot;, &quot;Fg...
+## $ quimiotipo &lt;chr&gt; &quot;15-ADON&quot;, &quot;15-ADON&quot;, &quot;15-ADON&quot;, &quot;15-ADON&quot;, &quot;15-ADO...
+## $ index      &lt;int&gt; 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, ...</code></pre>
+</div>
+<div id="reordenando-as-linhas" class="section level2">
+<h2><span class="header-section-number">4.7</span> Reordenando as linhas</h2>
+<p>No pacote dplyr, a função <code>arrange</code> pode ser usada para reordenação.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># reordena pelo ano</span>
+survey2 &lt;-<span class="st"> </span><span class="kw">arrange</span>(survey2, ano)
+<span class="kw">head</span>(survey2<span class="op">$</span>ano, <span class="dv">20</span>)</code></pre></div>
+<pre><code>##  [1] 2009 2009 2009 2009 2009 2009 2009 2009 2009 2009 2009 2009 2009 2009
+## [15] 2009 2009 2009 2009 2009 2009</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">tail</span>(survey2<span class="op">$</span>ano, <span class="dv">20</span>)</code></pre></div>
+<pre><code>##  [1] 2011 2011 2011 2011 2011 2011 2011 2011 2011 2011 2011 2011 2011 2011
+## [15] 2011 2011 2011 2011 2011 2011</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># reordena pelo valor de severidade</span>
+survey2 &lt;-<span class="st"> </span><span class="kw">arrange</span>(survey2, severidade)
+<span class="kw">head</span>(survey2<span class="op">$</span>severidade, <span class="dv">20</span>)</code></pre></div>
+<pre><code>##  [1] 0.00 0.00 0.00 0.02 0.03 0.03 0.03 0.03 0.03 0.05 0.07 0.07 0.07 0.07
+## [15] 0.09 0.09 0.09 0.09 0.09 0.09</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># veja o resultado</span>
+<span class="kw">arrange</span>(survey2, <span class="op">-</span>incidencia)</code></pre></div>
+<pre><code>## # A tibble: 671 x 12
+##    campo   ano local estado   lat  long residuo incidencia severidade
+##    &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;  &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt;        &lt;dbl&gt;      &lt;dbl&gt;
+##  1    15  2009 Palm~ RS     -27.8 -53.4 corn          90.0      18.5 
+##  2    15  2009 Palm~ RS     -27.8 -53.4 corn          90.0      18.5 
+##  3    15  2009 Palm~ RS     -27.8 -53.4 corn          90.0      18.5 
+##  4     2  2010 Cara~ RS     -28.3 -52.7 soybean       72.5      14.3 
+##  5     2  2010 Cara~ RS     -28.3 -52.8 soybean       72.5      14.3 
+##  6     2  2010 Cara~ RS     -28.3 -52.8 soybean       72.5      14.3 
+##  7     2  2010 Cara~ RS     -28.3 -52.8 soybean       72.5      14.3 
+##  8    24  2009 Lage~ RS     -28.1 -52.2 soybean       71         5.22
+##  9    24  2009 Lage~ RS     -28.1 -52.2 soybean       71         5.22
+## 10     6  2010 Cara~ RS     -28.3 -51.7 soybean       70.7       8.13
+## # ... with 661 more rows, and 3 more variables: especie &lt;chr&gt;,
+## #   quimiotipo &lt;chr&gt;, index &lt;int&gt;</code></pre>
+</div>
+<div id="encontrar-duplicatas" class="section level2">
+<h2><span class="header-section-number">4.8</span> Encontrar duplicatas</h2>
+<p>Para encontrar registros únicos ou duplicados no data frame usa-se a função <code>unique</code> e <code>duplicate</code>.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">unique</span>(survey3) <span class="co"># acha linhas únicas</span></code></pre></div>
+<pre><code>## # A tibble: 213 x 3
+##    field location            species
+##    &lt;dbl&gt; &lt;chr&gt;               &lt;chr&gt;  
+##  1    25 Agua Santa          Fgra   
+##  2    26 Agua Santa          Fgra   
+##  3    26 Agua Santa          Fmer   
+##  4    36 Agua Santa          Fgra   
+##  5    48 Antonio Prado       Fcor   
+##  6    49 Antonio Prado       Fgra   
+##  7    NA Apucarana           Fgra   
+##  8    NA Apucarana           Fmer   
+##  9    NA Arapongas           Fgra   
+## 10    NA Assis Chateaubriand Fmer   
+## # ... with 203 more rows</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">head</span>(<span class="kw">duplicated</span>(survey3), <span class="dv">10</span>) <span class="co"># verifica se é a linha tem dupla entrada</span></code></pre></div>
+<pre><code>##  [1] FALSE  TRUE  TRUE  TRUE  TRUE FALSE  TRUE  TRUE FALSE FALSE</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># note que aqui é uma função de lógica</span>
+
+<span class="kw">count</span>(<span class="kw">duplicated</span>(survey3)) <span class="co"># conta o número de linhas duplicadas</span></code></pre></div>
+<pre><code>##       x freq
+## 1 FALSE  213
+## 2  TRUE  458</code></pre>
+</div>
+<div id="renomeando-niveis" class="section level2">
+<h2><span class="header-section-number">4.9</span> Renomeando níveis</h2>
+<p>Muitas vezes queremos substituir o nome dos níveis de um fator, sem a necessidade de retornar à planilha eletrônica. No exemplo, vamos alterar o nome das espécies que está com a codificação (Fgra, Fmer, etc) para o nome binomial latino. Para isso, vamos usar a função <code>revalue</code> do pacote plyr.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">survey2<span class="op">$</span>especie &lt;-<span class="st"> </span><span class="kw">revalue</span>(survey2<span class="op">$</span>especie, <span class="kw">c</span>(<span class="st">&quot;Fgra&quot;</span> =<span class="st"> &quot;Fusarium graminearum&quot;</span>))</code></pre></div>
+</div>
+<div id="salvando-arquivo" class="section level2">
+<h2><span class="header-section-number">4.10</span> Salvando arquivo</h2>
+<p>Depois de se ter manipulado o conjunto de dados, pode-se salvar o data frame e formato de planilha eletrônica, sendo os mais comuns em formato txt ou csv. No pacote utils do R que é carregado automatica, a função <code>write.csv</code> permite salvar no arquivo externo.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># vamos criar o arquivo survey22.csv</span>
+<span class="kw">write.csv</span>(survey2, <span class="dt">file =</span> <span class="st">&quot;survey22.csv&quot;</span>)</code></pre></div>
+<p>O arquivo csv pode ser aberto em qualquer programa de planilha eletrônica. No entanto, pode-se optar por salvar diretamente no formato xlsx do Excel. Para isso, carrega-se o pacote openxlsx.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co">#library(openxlsx)</span>
+<span class="co">#write.xlsx(survey2, file = &quot;survey222.xlsx&quot;)</span></code></pre></div>
+</div>
+<div id="transposicao" class="section level2">
+<h2><span class="header-section-number">4.11</span> Transposição</h2>
+<p>Usualmente, várias funções do R seja para estatísticas ou visualização de dados exigem que os dados se apresentem da seguinte forma: cada observação é uma linha e cada coluna é uma variável. É o chamado conjunto na forma “tidy”, ou arrumado, em português.</p>
+<p>As vezes recebemos dados em que as observações se encontram em várias colunas quando há a interação com outras variáveis. Por exemplo, uma variável é analisada em vários tempos, mas o tempo está como uma variável na coluna e não com uma entrada única para cada tempo. Nesse caso, pode ser necessário fazer a transposição ou “arrumação” do conjunto de colunas para linhas. Vamos usar alguns pacotes do R para fazer essa transposição como o tidy e o reshape2.</p>
+<p>Vamos trabalhar com o conjunto “ralstonia” do pacote agricolae, o qual contém a contagem de colônias (log(1+UFC/g solo)) em placas de petri.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Carrega o arquivo de dados ralstonia do pacote agricolae</span>
+<span class="kw">library</span> (agricolae)
+<span class="kw">data</span>(ralstonia)
+
+<span class="co"># verifica as colunas do conjunto</span>
+<span class="kw">colnames</span>(ralstonia)</code></pre></div>
+<pre><code>## [1] &quot;place&quot;  &quot;Day2&quot;   &quot;Day15&quot;  &quot;Day29&quot;  &quot;Day43&quot;  &quot;Day58&quot;  &quot;Day73&quot;  &quot;Day133&quot;</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">head</span>(ralstonia)</code></pre></div>
+<pre><code>##    place  Day2 Day15 Day29 Day43 Day58 Day73 Day133
+## 1 Namora 7.509 7.552 6.541 6.390 6.214 5.863  4.838
+## 2   Hyo1 7.398 6.720 3.388 1.657 0.000 0.000  0.000
+## 3   Hyo2 7.399 6.118 2.195 0.000 0.000 0.000  0.000
+## 4    SR1 7.418 6.857 6.800 6.508 6.523 6.250  5.451
+## 5    SR2 7.325 7.414 7.221 7.005 6.937 6.777  6.437
+## 6   Cnt1 7.301 7.025 5.992 3.669 2.104 0.000  0.000</code></pre>
+<p>No pacote <code>reshape2</code> vamos utilizar a função <code>melt</code> para fazer a transposição de colunas para linhas.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(reshape2)
+<span class="co"># usa-se a função melt do pacote reshape2</span>
+ralstonia2 &lt;-<span class="st"> </span><span class="kw">melt</span>(ralstonia, <span class="dt">id=</span><span class="kw">c</span>(<span class="st">&quot;place&quot;</span>), 
+     <span class="dt">variable.name=</span><span class="st">&quot;days&quot;</span>, <span class="dt">value.name=</span><span class="st">&quot;count&quot;</span>)</code></pre></div>
+<p>No pacote tidyr podemos usar a função <code>gather</code> para o mesmo resultado, porém com muito menos esforço.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(tidyr)</code></pre></div>
+<pre><code>## 
+## Attaching package: &#39;tidyr&#39;</code></pre>
+<pre><code>## The following object is masked from &#39;package:reshape2&#39;:
+## 
+##     smiths</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">ralstonia3 &lt;-<span class="st"> </span><span class="kw">gather</span>(ralstonia, <span class="st">&quot;day&quot;</span>, <span class="st">&quot;count&quot;</span>, <span class="dv">2</span><span class="op">:</span><span class="dv">8</span>)</code></pre></div>
+<p>Nós podemos fazer o inverso pois, em alguns casos podemos trabalhar com os dados me formatos de uma matriz ou no formato “largo”. A função <code>spread</code> do pacote tidyr facilita essa operação.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># usando a função spread do tidyr: mais simples!</span>
+ralstonia_largo &lt;-<span class="st">  </span><span class="kw">spread</span>(ralstonia3, day, count)
+<span class="kw">head</span>(ralstonia_largo)</code></pre></div>
+<pre><code>##   place Day133 Day15  Day2 Day29 Day43 Day58 Day73
+## 1 Chmar  5.132 7.552 7.420 6.037 5.835 5.396 5.210
+## 2   Chz  5.037 7.381 7.347 6.856 6.705 6.469 5.959
+## 3  Cnt1  0.000 7.025 7.301 5.992 3.669 2.104 0.000
+## 4  Cnt2  0.000 6.428 7.287 2.195 0.000 0.000 0.000
+## 5  Cnt3  0.000 4.461 7.019 0.000 0.000 0.000 0.000
+## 6  Hco1  5.595 7.703 7.681 7.093 6.974 6.440 6.365</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># ou usando a função dcast do reshape2 - mais trabalhoso!</span>
+ralstonia_largo2 &lt;-<span class="st"> </span><span class="kw">dcast</span>(ralstonia3, place <span class="op">~</span><span class="st"> </span>day, <span class="dt">value.var=</span><span class="st">&quot;count&quot;</span>)</code></pre></div>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="visualizacao-de-dados.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="sumarizacao-dos-dados.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/03-manipula-dados.Rmd",
+"text": "Edit"
+},
+"download": ["bookdown-demo.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

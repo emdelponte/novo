@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>FIP 606</title>
+  <meta name="description" content="Disciplina da Pós-graduacão em Fitopatologia da UFV">
+  <meta name="generator" content="bookdown 0.7 and GitBook 2.6.7">
+
+  <meta property="og:title" content="FIP 606" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="Disciplina da Pós-graduacão em Fitopatologia da UFV" />
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="FIP 606" />
+  
+  <meta name="twitter:description" content="Disciplina da Pós-graduacão em Fitopatologia da UFV" />
+  
+
+<meta name="author" content="Prof. Emerson M. Del Ponte">
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="manipulacao-de-dados-no-r.html">
+<link rel="next" href="delineamentos-experimentais.html">
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./index.html">FIP 606 </a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Prefácio</a></li>
+<li class="chapter" data-level="1" data-path="introducao.html"><a href="introducao.html"><i class="fa fa-check"></i><b>1</b> Introdução</a><ul>
+<li class="chapter" data-level="1.1" data-path="introducao.html"><a href="introducao.html#estatistica-e-computacao"><i class="fa fa-check"></i><b>1.1</b> Estatística e computação</a></li>
+<li class="chapter" data-level="1.2" data-path="introducao.html"><a href="introducao.html#a-pesquisa-reproduzivel"><i class="fa fa-check"></i><b>1.2</b> A pesquisa reproduzível</a></li>
+<li class="chapter" data-level="1.3" data-path="introducao.html"><a href="introducao.html#boas-praticas"><i class="fa fa-check"></i><b>1.3</b> Boas práticas</a></li>
+<li class="chapter" data-level="1.4" data-path="introducao.html"><a href="introducao.html#sugestao-de-leituras"><i class="fa fa-check"></i><b>1.4</b> Sugestão de leituras</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="carregando-os-dados-no-ambiente.html"><a href="carregando-os-dados-no-ambiente.html"><i class="fa fa-check"></i><b>2</b> Carregando os dados no ambiente</a><ul>
+<li class="chapter" data-level="2.1" data-path="carregando-os-dados-no-ambiente.html"><a href="carregando-os-dados-no-ambiente.html#usando-o-argumento-text"><i class="fa fa-check"></i><b>2.1</b> Usando o argumento text</a></li>
+<li class="chapter" data-level="2.2" data-path="carregando-os-dados-no-ambiente.html"><a href="carregando-os-dados-no-ambiente.html#importando-do-excel"><i class="fa fa-check"></i><b>2.2</b> Importando do excel</a></li>
+<li class="chapter" data-level="2.3" data-path="carregando-os-dados-no-ambiente.html"><a href="carregando-os-dados-no-ambiente.html#dados-em-outros-arquivos"><i class="fa fa-check"></i><b>2.3</b> Dados em outros arquivos</a></li>
+<li class="chapter" data-level="2.4" data-path="carregando-os-dados-no-ambiente.html"><a href="carregando-os-dados-no-ambiente.html#dados-em-pacotes"><i class="fa fa-check"></i><b>2.4</b> Dados em pacotes</a></li>
+<li class="chapter" data-level="2.5" data-path="carregando-os-dados-no-ambiente.html"><a href="carregando-os-dados-no-ambiente.html#dados-de-pacotes"><i class="fa fa-check"></i><b>2.5</b> Dados de pacotes</a></li>
+<li class="chapter" data-level="2.6" data-path="carregando-os-dados-no-ambiente.html"><a href="carregando-os-dados-no-ambiente.html#referencias-na-web"><i class="fa fa-check"></i><b>2.6</b> Referências na web</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="visualizacao-de-dados.html"><a href="visualizacao-de-dados.html"><i class="fa fa-check"></i><b>3</b> Visualização de dados</a><ul>
+<li class="chapter" data-level="3.1" data-path="visualizacao-de-dados.html"><a href="visualizacao-de-dados.html#dados-de-levantamento"><i class="fa fa-check"></i><b>3.1</b> Dados de levantamento</a></li>
+<li class="chapter" data-level="3.2" data-path="visualizacao-de-dados.html"><a href="visualizacao-de-dados.html#construindo-um-grafico"><i class="fa fa-check"></i><b>3.2</b> Construindo um gráfico</a></li>
+<li class="chapter" data-level="3.3" data-path="visualizacao-de-dados.html"><a href="visualizacao-de-dados.html#dados-categoricos"><i class="fa fa-check"></i><b>3.3</b> Dados categóricos</a></li>
+<li class="chapter" data-level="3.4" data-path="visualizacao-de-dados.html"><a href="visualizacao-de-dados.html#dados-continuos"><i class="fa fa-check"></i><b>3.4</b> Dados contínuos</a></li>
+<li class="chapter" data-level="3.5" data-path="visualizacao-de-dados.html"><a href="visualizacao-de-dados.html#continuos-x-categoricos"><i class="fa fa-check"></i><b>3.5</b> Contínuos x categóricos</a></li>
+<li class="chapter" data-level="3.6" data-path="visualizacao-de-dados.html"><a href="visualizacao-de-dados.html#duas-variaveis-continuas"><i class="fa fa-check"></i><b>3.6</b> Duas variáveis contínuas</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="manipulacao-de-dados-no-r.html"><a href="manipulacao-de-dados-no-r.html"><i class="fa fa-check"></i><b>4</b> Manipulação de dados no R</a><ul>
+<li class="chapter" data-level="4.1" data-path="manipulacao-de-dados-no-r.html"><a href="manipulacao-de-dados-no-r.html#conjunto-de-dados"><i class="fa fa-check"></i><b>4.1</b> Conjunto de dados</a></li>
+<li class="chapter" data-level="4.2" data-path="manipulacao-de-dados-no-r.html"><a href="manipulacao-de-dados-no-r.html#selecionando-colunas"><i class="fa fa-check"></i><b>4.2</b> Selecionando colunas</a></li>
+<li class="chapter" data-level="4.3" data-path="manipulacao-de-dados-no-r.html"><a href="manipulacao-de-dados-no-r.html#selecionando-linhas"><i class="fa fa-check"></i><b>4.3</b> Selecionando linhas</a></li>
+<li class="chapter" data-level="4.4" data-path="manipulacao-de-dados-no-r.html"><a href="manipulacao-de-dados-no-r.html#renomeando-variaveis"><i class="fa fa-check"></i><b>4.4</b> Renomeando variáveis</a></li>
+<li class="chapter" data-level="4.5" data-path="manipulacao-de-dados-no-r.html"><a href="manipulacao-de-dados-no-r.html#adicionando-variaveis"><i class="fa fa-check"></i><b>4.5</b> Adicionando variáveis</a></li>
+<li class="chapter" data-level="4.6" data-path="manipulacao-de-dados-no-r.html"><a href="manipulacao-de-dados-no-r.html#removendo-variaveis"><i class="fa fa-check"></i><b>4.6</b> Removendo variáveis</a></li>
+<li class="chapter" data-level="4.7" data-path="manipulacao-de-dados-no-r.html"><a href="manipulacao-de-dados-no-r.html#reordenando-as-linhas"><i class="fa fa-check"></i><b>4.7</b> Reordenando as linhas</a></li>
+<li class="chapter" data-level="4.8" data-path="manipulacao-de-dados-no-r.html"><a href="manipulacao-de-dados-no-r.html#encontrar-duplicatas"><i class="fa fa-check"></i><b>4.8</b> Encontrar duplicatas</a></li>
+<li class="chapter" data-level="4.9" data-path="manipulacao-de-dados-no-r.html"><a href="manipulacao-de-dados-no-r.html#renomeando-niveis"><i class="fa fa-check"></i><b>4.9</b> Renomeando níveis</a></li>
+<li class="chapter" data-level="4.10" data-path="manipulacao-de-dados-no-r.html"><a href="manipulacao-de-dados-no-r.html#salvando-arquivo"><i class="fa fa-check"></i><b>4.10</b> Salvando arquivo</a></li>
+<li class="chapter" data-level="4.11" data-path="manipulacao-de-dados-no-r.html"><a href="manipulacao-de-dados-no-r.html#transposicao"><i class="fa fa-check"></i><b>4.11</b> Transposição</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="sumarizacao-dos-dados.html"><a href="sumarizacao-dos-dados.html"><i class="fa fa-check"></i><b>5</b> Sumarização dos dados</a><ul>
+<li class="chapter" data-level="5.1" data-path="sumarizacao-dos-dados.html"><a href="sumarizacao-dos-dados.html#conjunto-de-dados-1"><i class="fa fa-check"></i><b>5.1</b> Conjunto de dados</a></li>
+<li class="chapter" data-level="5.2" data-path="sumarizacao-dos-dados.html"><a href="sumarizacao-dos-dados.html#dados-categoricos-1"><i class="fa fa-check"></i><b>5.2</b> Dados categóricos</a></li>
+<li class="chapter" data-level="5.3" data-path="sumarizacao-dos-dados.html"><a href="sumarizacao-dos-dados.html#dados-continuos-1"><i class="fa fa-check"></i><b>5.3</b> Dados contínuos</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="delineamentos-experimentais.html"><a href="delineamentos-experimentais.html"><i class="fa fa-check"></i><b>6</b> Delineamentos experimentais</a><ul>
+<li class="chapter" data-level="6.1" data-path="delineamentos-experimentais.html"><a href="delineamentos-experimentais.html#experimento-simples"><i class="fa fa-check"></i><b>6.1</b> Experimento simples</a><ul>
+<li class="chapter" data-level="6.1.1" data-path="delineamentos-experimentais.html"><a href="delineamentos-experimentais.html#inteiramente-casualizado"><i class="fa fa-check"></i><b>6.1.1</b> Inteiramente casualizado</a></li>
+<li class="chapter" data-level="6.1.2" data-path="delineamentos-experimentais.html"><a href="delineamentos-experimentais.html#blocos-casualizados"><i class="fa fa-check"></i><b>6.1.2</b> Blocos casualizados</a></li>
+</ul></li>
+<li class="chapter" data-level="6.2" data-path="delineamentos-experimentais.html"><a href="delineamentos-experimentais.html#experimento-fatorial"><i class="fa fa-check"></i><b>6.2</b> Experimento fatorial</a><ul>
+<li class="chapter" data-level="6.2.1" data-path="delineamentos-experimentais.html"><a href="delineamentos-experimentais.html#inteiramente-casualizado-1"><i class="fa fa-check"></i><b>6.2.1</b> Inteiramente casualizado</a></li>
+<li class="chapter" data-level="6.2.2" data-path="delineamentos-experimentais.html"><a href="delineamentos-experimentais.html#parcela-dividida"><i class="fa fa-check"></i><b>6.2.2</b> Parcela dividida</a></li>
+<li class="chapter" data-level="6.2.3" data-path="delineamentos-experimentais.html"><a href="delineamentos-experimentais.html#blocos-casualizados-1"><i class="fa fa-check"></i><b>6.2.3</b> Blocos casualizados</a></li>
+</ul></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">FIP 606</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="sumarizacao-dos-dados" class="section level1">
+<h1><span class="header-section-number">Capítulo 5</span> Sumarização dos dados</h1>
+<p>A análise exploratória envolve, além da visualização dos dados, a descrição das variáveis de natureza categórica ou contínuas por meio de algumas métricas específicas, conforme o tipo de variável.</p>
+<p>No caso de variáveis categóricas, é comum se calcular os totais ou frequencias absolutas ou relativas (percentual) do número de casos em cada nível ou classe das variáveis, quando for o caso.</p>
+<p>No caso de variáveis contínuas, a sumarização é normalmente feita com base em métricas de estimativas de ponto ou posição (média, mediana, moda, etc) ou de variabilidade/dispersão dos dados (variância, desvio padrão, etc). Veremos a seguir como obter algumas estatísticas sumário, condicionada ou não por níveis de variáveis categóricas, após importar e “arrumar” os dados no R no formato “tidy”.</p>
+<div id="conjunto-de-dados-1" class="section level2">
+<h2><span class="header-section-number">5.1</span> Conjunto de dados</h2>
+<p>Continuemos com o conjunto de dados do levantamento de giberela e coleta de isolados do complexo de espécies <em>F. graminearum</em> coletados nos estados do RS e PR, assim como o subconjunto <code>survey_rs</code>, com os dados apenas para o RS.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(readr)
+survey2 &lt;-<span class="st"> </span><span class="kw">read_csv</span> (<span class="st">&quot;data/survey2.csv&quot;</span>)
+
+<span class="kw">library</span>(dplyr)
+survey_rs &lt;-<span class="st"> </span><span class="kw">filter</span>(survey2, state <span class="op">==</span><span class="st"> &quot;RS&quot;</span>)</code></pre></div>
+</div>
+<div id="dados-categoricos-1" class="section level2">
+<h2><span class="header-section-number">5.2</span> Dados categóricos</h2>
+<p>Para dados categóricos, as funções <code>table</code> e <code>prop.table</code> são muito úteis para sumarizar a frequencia (contagem) de registros. Vamos analisar o conjunto <code>survey2</code> e contar o número de isolados (cada linha do data frame é um isolado) para uma única variável ou duas variáveis cruzadas, a chamada “tabela de contingência”.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># a função attach &quot;libera&quot; as variáveis do data frame</span>
+<span class="kw">attach</span>(survey2) 
+
+<span class="co"># Número de isolados por ano </span>
+<span class="kw">table</span>(year)</code></pre></div>
+<pre><code>## year
+## 2009 2010 2011 
+##  270  216  185</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Número de isolados por ano e estado</span>
+tab &lt;-<span class="st"> </span><span class="kw">table</span> (state, year)
+tab</code></pre></div>
+<pre><code>##      year
+## state 2009 2010 2011
+##    PR  123    0   93
+##    RS  147  216   92</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">str</span>(tab)</code></pre></div>
+<pre><code>##  &#39;table&#39; int [1:2, 1:3] 123 147 0 216 93 92
+##  - attr(*, &quot;dimnames&quot;)=List of 2
+##   ..$ state: chr [1:2] &quot;PR&quot; &quot;RS&quot;
+##   ..$ year : chr [1:3] &quot;2009&quot; &quot;2010&quot; &quot;2011&quot;</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># podemos transformar a tabela em um dataframe</span>
+tab &lt;-<span class="st"> </span><span class="kw">table</span>(state, year)
+<span class="kw">data.frame</span>(tab)</code></pre></div>
+<pre><code>##   state year Freq
+## 1    PR 2009  123
+## 2    RS 2009  147
+## 3    PR 2010    0
+## 4    RS 2010  216
+## 5    PR 2011   93
+## 6    RS 2011   92</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Sumariza os casos em proporção</span>
+<span class="kw">round</span>((<span class="kw">prop.table</span>(tab)<span class="op">*</span><span class="dv">100</span>),<span class="dv">1</span>) <span class="co"># casos em proporção</span></code></pre></div>
+<pre><code>##      year
+## state 2009 2010 2011
+##    PR 18.3  0.0 13.9
+##    RS 21.9 32.2 13.7</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">prop.table</span>(tab, <span class="dv">1</span>) <span class="co"># proporção nas linhas</span></code></pre></div>
+<pre><code>##      year
+## state      2009      2010      2011
+##    PR 0.5694444 0.0000000 0.4305556
+##    RS 0.3230769 0.4747253 0.2021978</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">prop.table</span>(tab, <span class="dv">2</span>) <span class="co"># proporção nas colunas</span></code></pre></div>
+<pre><code>##      year
+## state      2009      2010      2011
+##    PR 0.4555556 0.0000000 0.5027027
+##    RS 0.5444444 1.0000000 0.4972973</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># A função margin.table soma apenas na &quot;margem&quot; da tabela ou seja, para cada uma das variáveis.</span>
+
+<span class="co"># Soma as frequencias dentro do ano</span>
+<span class="kw">margin.table</span>(<span class="kw">table</span>(year,state), <span class="dv">1</span>) </code></pre></div>
+<pre><code>## year
+## 2009 2010 2011 
+##  270  216  185</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># soma as frequencias dentro do estado</span>
+<span class="kw">margin.table</span>(<span class="kw">table</span>(year,state), <span class="dv">2</span>) </code></pre></div>
+<pre><code>## state
+##  PR  RS 
+## 216 455</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">table</span>(state)</code></pre></div>
+<pre><code>## state
+##  PR  RS 
+## 216 455</code></pre>
+<p>Podemos fazer uma tabela com três entradas incluindo o muncípio de origem do isolado.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># continuamos usando a função table. Note que a terceira variável é a que fica em primeiro nível de agrupamento. Depois tem os locais e os anos na coluna</span>
+tab2 &lt;-<span class="st"> </span><span class="kw">table</span>(location, year, state)
+tab2</code></pre></div>
+<pre><code>## , , state = PR
+## 
+##                         year
+## location                 2009 2010 2011
+##   Agua Santa                0    0    0
+##   Antonio Prado             0    0    0
+##   Apucarana                 4    0    0
+##   Arapongas                 4    0    0
+##   Assis Chateaubriand       5    0    0
+##   Barreto                   0    0    0
+##   Bela Vista do Paraiso     1    0    0
+##   Boa Vista das Missoes     0    0    0
+##   Cambe                     4    0    0
+##   Campo Mourao             11    0    0
+##   Cantagalo                 0    0   26
+##   Carazinho                 0    0    0
+##   Cascavel                  5    0    0
+##   Caseiros                  0    0    0
+##   Colorado                  0    0    0
+##   Condor                    0    0    0
+##   Corbelia                  2    0    0
+##   Cornelio Procopio         5    0    0
+##   Coronel Barros            0    0    0
+##   Coxilha                   0    0    0
+##   Cruz Alta                 0    0    0
+##   Entre-Ijuis               0    0    0
+##   Erechim                   0    0    0
+##   Ernestina                 0    0    0
+##   Estacao                   0    0    0
+##   Farol                     2    0    0
+##   Formosa do Oeste          4    0    0
+##   Ibiaca                    0    0    0
+##   Ijui                      0    0    0
+##   Janiopolis                3    0    0
+##   Jataizinho                5    0    0
+##   Jesuitas                  5    0    0
+##   Juranda                   5    0    0
+##   Lageado do Bugre          0    0    0
+##   Lagoa Vermelha            0    0    0
+##   Mambore                   3    0    0
+##   Manoel Ribas              0    0   20
+##   Marau                     0    0    0
+##   Maringa                  21    0    0
+##   Mato Castelhano           0    0    0
+##   Nao-me-Toque              0    0    0
+##   Palmeira das Missoes      0    0    0
+##   Panambi                   0    0    0
+##   Passo Fundo               0    0    0
+##   Pato Branco               6    0    0
+##   Peabiru                   5    0    0
+##   Pejucara                  0    0    0
+##   Ponta Grossa              6    0    0
+##   Rol&lt;U+008A&gt;ndia             1    0    0
+##   Roncador                  0    0   47
+##   Sagrada Familia           0    0    0
+##   Sananduva                 0    0    0
+##   Santa Barbara do Sul      0    0    0
+##   Sao Miguel das Missoes    0    0    0
+##   Sertaneja                 3    0    0
+##   Sertanopolis              4    0    0
+##   Sertao                    0    0    0
+##   Soledade                  0    0    0
+##   Tapejara                  0    0    0
+##   Tapera                    0    0    0
+##   Tio Hugo                  0    0    0
+##   Toledo                    5    0    0
+##   Tupassi                   4    0    0
+##   Vacaria                   0    0    0
+##   Victor Graeff             0    0    0
+## 
+## , , state = RS
+## 
+##                         year
+## location                 2009 2010 2011
+##   Agua Santa                0    9    1
+##   Antonio Prado             0    5    0
+##   Apucarana                 0    0    0
+##   Arapongas                 0    0    0
+##   Assis Chateaubriand       0    0    0
+##   Barreto                   0    4    0
+##   Bela Vista do Paraiso     0    0    0
+##   Boa Vista das Missoes     7    0    0
+##   Cambe                     0    0    0
+##   Campo Mourao              0    0    0
+##   Cantagalo                 0    0    0
+##   Carazinho                10   28    6
+##   Cascavel                  0    0    0
+##   Caseiros                  0   13    0
+##   Colorado                  0    0    1
+##   Condor                    8    0    1
+##   Corbelia                  0    0    0
+##   Cornelio Procopio         0    0    0
+##   Coronel Barros            7    0    0
+##   Coxilha                  10   18    0
+##   Cruz Alta                11    0    0
+##   Entre-Ijuis               4    0    0
+##   Erechim                   0    9    0
+##   Ernestina                 7    0    0
+##   Estacao                   0    5    0
+##   Farol                     0    0    0
+##   Formosa do Oeste          0    0    0
+##   Ibiaca                    0    5    0
+##   Ijui                      4    0   25
+##   Janiopolis                0    0    0
+##   Jataizinho                0    0    0
+##   Jesuitas                  0    0    0
+##   Juranda                   0    0    0
+##   Lageado do Bugre          4    0    0
+##   Lagoa Vermelha            0   25    4
+##   Mambore                   0    0    0
+##   Manoel Ribas              0    0    0
+##   Marau                     0    0    3
+##   Maringa                   0    0    0
+##   Mato Castelhano           0    5    1
+##   Nao-me-Toque              7    0    7
+##   Palmeira das Missoes     20    0    1
+##   Panambi                   8    0   14
+##   Passo Fundo               4   15    0
+##   Pato Branco               0    0    0
+##   Peabiru                   0    0    0
+##   Pejucara                  4    0    0
+##   Ponta Grossa              0    0    0
+##   Rol&lt;U+008A&gt;ndia             0    0    0
+##   Roncador                  0    0    0
+##   Sagrada Familia           4    0    0
+##   Sananduva                 0   10    2
+##   Santa Barbara do Sul      4    3    6
+##   Sao Miguel das Missoes    6    0    0
+##   Sertaneja                 0    0    0
+##   Sertanopolis              0    0    0
+##   Sertao                    0   13    4
+##   Soledade                  0    5    0
+##   Tapejara                  0   18    4
+##   Tapera                    0    0    2
+##   Tio Hugo                  4    0    4
+##   Toledo                    0    0    0
+##   Tupassi                   0    0    0
+##   Vacaria                  10   26    4
+##   Victor Graeff             4    0    2</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">prop.table</span> (<span class="kw">table</span>(species, residue))</code></pre></div>
+<pre><code>##        residue
+## species        corn      potato     soybean
+##    Fasi 0.000000000 0.000000000 0.006637168
+##    Faus 0.004424779 0.000000000 0.002212389
+##    Fcor 0.017699115 0.000000000 0.019911504
+##    Fgra 0.325221239 0.004424779 0.564159292
+##    Fmer 0.026548673 0.000000000 0.028761062</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">prop.table</span>(<span class="kw">table</span>(species, year))</code></pre></div>
+<pre><code>##        year
+## species        2009        2010        2011
+##    Fasi 0.000000000 0.001490313 0.002980626
+##    Faus 0.000000000 0.004470939 0.007451565
+##    Fcor 0.004470939 0.017883756 0.002980626
+##    Fgra 0.342771982 0.278688525 0.208643815
+##    Fmer 0.055141580 0.019374069 0.053651267</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">table</span>(species, genotype)</code></pre></div>
+<pre><code>##        genotype
+## species 15-ADON 3-ADON NIV
+##    Fasi       0      0   3
+##    Faus       0      6   2
+##    Fcor       0      3  14
+##    Fgra     557      0   0
+##    Fmer       1      0  85</code></pre>
+</div>
+<div id="dados-continuos-1" class="section level2">
+<h2><span class="header-section-number">5.3</span> Dados contínuos</h2>
+<p>No caso de dados numéricos ou contínuos, o interesse maior é em sumarizar uma série de dados em um único valor, sendo mais comumente usada a média aritmética ou a mediana, dependendo da forma de distribuição dos dados. Essas estimativas podem sem obtidas para um conjunto condicionado ou não por níveis categóricos de uma determinada variável. Na visualização, esse foi o caso visto para o uso de boxplots, histogramas e dotplots.</p>
+<p>A estatística sumário pode ser calculada condicionada por uma variável categórica que é um tipo de agrupamento. No <code>R</code> podemos usar as funções <code>group_by</code> e <code>summarize</code> para gerar um novo conjunto de dados com os valores sumarizados por determinado grupo. Nesse caso, cada linha do conjunto é o sumário de várias linhas.</p>
+<p>Primeiramente, vamos eliminar todos as linhas duplicadas de severidade e incidência com o mesmo valor, deixando apenas um valor para cada campo de trigo. Vamos usar a função <code>unique</code> e <code>select</code>.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(dplyr)
+field_rs &lt;-<span class="st"> </span><span class="kw">unique</span>(<span class="kw">select</span>(survey_rs, <span class="kw">c</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">3</span>,<span class="dv">7</span><span class="op">:</span><span class="dv">9</span>)))
+
+<span class="co"># transforma o ano para factor</span>
+field_rs<span class="op">$</span>year &lt;-<span class="st"> </span><span class="kw">as.factor</span>(field_rs<span class="op">$</span>year)</code></pre></div>
+<p>Podemos usar a função <code>summary</code> para sumarizar todas as variáveis do conjunto.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">summary</span>(field_rs)</code></pre></div>
+<pre><code>##      field         year      location           residue         
+##  Min.   : 1.00   2009:51   Length:137         Length:137        
+##  1st Qu.:13.00   2010:49   Class :character   Class :character  
+##  Median :25.00   2011:37   Mode  :character   Mode  :character  
+##  Mean   :25.41                                                  
+##  3rd Qu.:38.00                                                  
+##  Max.   :59.00                                                  
+##       inc             sev        
+##  Min.   : 0.00   Min.   : 0.000  
+##  1st Qu.:11.50   1st Qu.: 0.550  
+##  Median :25.50   Median : 1.490  
+##  Mean   :29.46   Mean   : 2.912  
+##  3rd Qu.:44.00   3rd Qu.: 3.730  
+##  Max.   :89.95   Max.   :18.650</code></pre>
+<p>A função <code>summary</code> pode ser também aplicada somente para uma variável usando o $ após o nome do conjunto.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">summary</span>(field_rs<span class="op">$</span>sev)</code></pre></div>
+<pre><code>##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+##   0.000   0.550   1.490   2.912   3.730  18.650</code></pre>
+<p>A função <code>describe</code> do pacote <code>Hmisc</code> oferece uma opção de sumarização.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(Hmisc)
+<span class="kw">describe</span>(field_rs<span class="op">$</span>sev)</code></pre></div>
+<pre><code>## field_rs$sev 
+##        n  missing distinct     Info     Mean      Gmd      .05      .10 
+##      137        0      122        1    2.912    3.441    0.090    0.236 
+##      .25      .50      .75      .90      .95 
+##    0.550    1.490    3.730    7.464   10.138 
+## 
+## lowest :  0.00  0.02  0.03  0.05  0.07, highest: 14.10 14.27 17.48 18.51 18.65</code></pre>
+<p>Pode-se usar essas funções individualmente como nos exemplos abaixo. Note que, até agora, a estatística foi obtida para todos os valores da variável, sem qualquer agrupamento.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">mean</span>(field_rs<span class="op">$</span>sev)</code></pre></div>
+<pre><code>## [1] 2.912482</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">median</span>(field_rs<span class="op">$</span>sev)</code></pre></div>
+<pre><code>## [1] 1.49</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">IQR</span>(field_rs<span class="op">$</span>sev)</code></pre></div>
+<pre><code>## [1] 3.18</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">sd</span>(field_rs<span class="op">$</span>sev)</code></pre></div>
+<pre><code>## [1] 3.719815</code></pre>
+<p>Agora iremos obter a estatística sumário por grupos ou níveis de uma variável categórica. Para isso, utilizaremos a função <code>group_by</code> e <code>summarize</code> do pacote dplyr.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Agrupamento por ano</span>
+<span class="kw">library</span>(dplyr)
+by_year &lt;-<span class="st"> </span><span class="kw">group_by</span>(field_rs, year)
+<span class="kw">head</span>(by_year)</code></pre></div>
+<pre><code>## # A tibble: 6 x 6
+## # Groups:   year [2]
+##   field year  location      residue   inc   sev
+##   &lt;dbl&gt; &lt;fct&gt; &lt;chr&gt;         &lt;chr&gt;   &lt;dbl&gt; &lt;dbl&gt;
+## 1    25 2010  Agua Santa    soybean  68.2  9.47
+## 2    26 2010  Agua Santa    corn     34    3.73
+## 3    36 2011  Agua Santa    soybean  40.5  1.31
+## 4    48 2010  Antonio Prado soybean   2    0.02
+## 5    49 2010  Antonio Prado corn     11    0.22
+## 6    38 2010  Barreto       soybean  13    0.46</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">str</span>(by_year)</code></pre></div>
+<pre><code>## Classes &#39;grouped_df&#39;, &#39;tbl_df&#39;, &#39;tbl&#39; and &#39;data.frame&#39;:  137 obs. of  6 variables:
+##  $ field   : num  25 26 36 48 49 38 21 22 2 3 ...
+##  $ year    : Factor w/ 3 levels &quot;2009&quot;,&quot;2010&quot;,..: 2 2 3 2 2 2 1 1 2 2 ...
+##  $ location: chr  &quot;Agua Santa&quot; &quot;Agua Santa&quot; &quot;Agua Santa&quot; &quot;Antonio Prado&quot; ...
+##  $ residue : chr  &quot;soybean&quot; &quot;corn&quot; &quot;soybean&quot; &quot;soybean&quot; ...
+##  $ inc     : num  68.2 34 40.5 2 11 ...
+##  $ sev     : num  9.47 3.73 1.31 0.02 0.22 ...
+##  - attr(*, &quot;vars&quot;)= chr &quot;year&quot;
+##  - attr(*, &quot;drop&quot;)= logi TRUE
+##  - attr(*, &quot;indices&quot;)=List of 3
+##   ..$ : int  6 7 16 18 19 24 25 27 28 29 ...
+##   ..$ : int  0 1 3 4 5 8 9 10 11 12 ...
+##   ..$ : int  2 14 15 17 23 26 50 51 52 53 ...
+##  - attr(*, &quot;group_sizes&quot;)= int  51 49 37
+##  - attr(*, &quot;biggest_group_size&quot;)= int 51
+##  - attr(*, &quot;labels&quot;)=&#39;data.frame&#39;:   3 obs. of  1 variable:
+##   ..$ year: Factor w/ 3 levels &quot;2009&quot;,&quot;2010&quot;,..: 1 2 3
+##   ..- attr(*, &quot;vars&quot;)= chr &quot;year&quot;
+##   ..- attr(*, &quot;drop&quot;)= logi TRUE</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">str</span>(field_rs)</code></pre></div>
+<pre><code>## Classes &#39;tbl_df&#39;, &#39;tbl&#39; and &#39;data.frame&#39;:    137 obs. of  6 variables:
+##  $ field   : num  25 26 36 48 49 38 21 22 2 3 ...
+##  $ year    : Factor w/ 3 levels &quot;2009&quot;,&quot;2010&quot;,..: 2 2 3 2 2 2 1 1 2 2 ...
+##  $ location: chr  &quot;Agua Santa&quot; &quot;Agua Santa&quot; &quot;Agua Santa&quot; &quot;Antonio Prado&quot; ...
+##  $ residue : chr  &quot;soybean&quot; &quot;corn&quot; &quot;soybean&quot; &quot;soybean&quot; ...
+##  $ inc     : num  68.2 34 40.5 2 11 ...
+##  $ sev     : num  9.47 3.73 1.31 0.02 0.22 ...</code></pre>
+<p>Na sequencia, usaremos a função <code>summarize</code> para criar um novo conjunto de dados com o nome “dis_by_year2” onde cada linha conterá o valor da estatística. No exemplo, será calculada a média de severidade e incidência em cada grupo criado no conjunto <code>by_year2</code>.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">dis_by_year2 &lt;-<span class="st"> </span><span class="kw">summarise</span>(<span class="kw">group_by</span>(survey_rs, year), 
+          <span class="dt">inc_mean =</span> <span class="kw">mean</span>(inc), 
+          <span class="dt">inc_sd =</span> <span class="kw">sd</span>(inc),
+          <span class="dt">sev_mean =</span> <span class="kw">mean</span>(sev),
+          <span class="dt">sev_sd =</span> <span class="kw">sd</span>(sev),
+          <span class="dt">n_fields =</span> <span class="kw">length</span>(sev)
+                 )
+dis_by_year2</code></pre></div>
+<pre><code>##   inc_mean   inc_sd sev_mean   sev_sd n_fields
+## 1 30.57743 20.74751 3.172923 4.012563      455</code></pre>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="manipulacao-de-dados-no-r.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="delineamentos-experimentais.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/04-sumariza-dados.Rmd",
+"text": "Edit"
+},
+"download": ["bookdown-demo.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

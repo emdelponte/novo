@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>FIP 606</title>
+  <meta name="description" content="Disciplina da Pós-graduacão em Fitopatologia da UFV">
+  <meta name="generator" content="bookdown 0.7 and GitBook 2.6.7">
+
+  <meta property="og:title" content="FIP 606" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="Disciplina da Pós-graduacão em Fitopatologia da UFV" />
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="FIP 606" />
+  
+  <meta name="twitter:description" content="Disciplina da Pós-graduacão em Fitopatologia da UFV" />
+  
+
+<meta name="author" content="Prof. Emerson M. Del Ponte">
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+
+<link rel="next" href="introducao.html">
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./index.html">FIP 606 </a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Prefácio</a></li>
+<li class="chapter" data-level="1" data-path="introducao.html"><a href="introducao.html"><i class="fa fa-check"></i><b>1</b> Introdução</a><ul>
+<li class="chapter" data-level="1.1" data-path="introducao.html"><a href="introducao.html#estatistica-e-computacao"><i class="fa fa-check"></i><b>1.1</b> Estatística e computação</a></li>
+<li class="chapter" data-level="1.2" data-path="introducao.html"><a href="introducao.html#a-pesquisa-reproduzivel"><i class="fa fa-check"></i><b>1.2</b> A pesquisa reproduzível</a></li>
+<li class="chapter" data-level="1.3" data-path="introducao.html"><a href="introducao.html#boas-praticas"><i class="fa fa-check"></i><b>1.3</b> Boas práticas</a></li>
+<li class="chapter" data-level="1.4" data-path="introducao.html"><a href="introducao.html#sugestao-de-leituras"><i class="fa fa-check"></i><b>1.4</b> Sugestão de leituras</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="carregando-os-dados-no-ambiente.html"><a href="carregando-os-dados-no-ambiente.html"><i class="fa fa-check"></i><b>2</b> Carregando os dados no ambiente</a><ul>
+<li class="chapter" data-level="2.1" data-path="carregando-os-dados-no-ambiente.html"><a href="carregando-os-dados-no-ambiente.html#usando-o-argumento-text"><i class="fa fa-check"></i><b>2.1</b> Usando o argumento text</a></li>
+<li class="chapter" data-level="2.2" data-path="carregando-os-dados-no-ambiente.html"><a href="carregando-os-dados-no-ambiente.html#importando-do-excel"><i class="fa fa-check"></i><b>2.2</b> Importando do excel</a></li>
+<li class="chapter" data-level="2.3" data-path="carregando-os-dados-no-ambiente.html"><a href="carregando-os-dados-no-ambiente.html#dados-em-outros-arquivos"><i class="fa fa-check"></i><b>2.3</b> Dados em outros arquivos</a></li>
+<li class="chapter" data-level="2.4" data-path="carregando-os-dados-no-ambiente.html"><a href="carregando-os-dados-no-ambiente.html#dados-em-pacotes"><i class="fa fa-check"></i><b>2.4</b> Dados em pacotes</a></li>
+<li class="chapter" data-level="2.5" data-path="carregando-os-dados-no-ambiente.html"><a href="carregando-os-dados-no-ambiente.html#dados-de-pacotes"><i class="fa fa-check"></i><b>2.5</b> Dados de pacotes</a></li>
+<li class="chapter" data-level="2.6" data-path="carregando-os-dados-no-ambiente.html"><a href="carregando-os-dados-no-ambiente.html#referencias-na-web"><i class="fa fa-check"></i><b>2.6</b> Referências na web</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="visualizacao-de-dados.html"><a href="visualizacao-de-dados.html"><i class="fa fa-check"></i><b>3</b> Visualização de dados</a><ul>
+<li class="chapter" data-level="3.1" data-path="visualizacao-de-dados.html"><a href="visualizacao-de-dados.html#dados-de-levantamento"><i class="fa fa-check"></i><b>3.1</b> Dados de levantamento</a></li>
+<li class="chapter" data-level="3.2" data-path="visualizacao-de-dados.html"><a href="visualizacao-de-dados.html#construindo-um-grafico"><i class="fa fa-check"></i><b>3.2</b> Construindo um gráfico</a></li>
+<li class="chapter" data-level="3.3" data-path="visualizacao-de-dados.html"><a href="visualizacao-de-dados.html#dados-categoricos"><i class="fa fa-check"></i><b>3.3</b> Dados categóricos</a></li>
+<li class="chapter" data-level="3.4" data-path="visualizacao-de-dados.html"><a href="visualizacao-de-dados.html#dados-continuos"><i class="fa fa-check"></i><b>3.4</b> Dados contínuos</a></li>
+<li class="chapter" data-level="3.5" data-path="visualizacao-de-dados.html"><a href="visualizacao-de-dados.html#continuos-x-categoricos"><i class="fa fa-check"></i><b>3.5</b> Contínuos x categóricos</a></li>
+<li class="chapter" data-level="3.6" data-path="visualizacao-de-dados.html"><a href="visualizacao-de-dados.html#duas-variaveis-continuas"><i class="fa fa-check"></i><b>3.6</b> Duas variáveis contínuas</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="manipulacao-de-dados-no-r.html"><a href="manipulacao-de-dados-no-r.html"><i class="fa fa-check"></i><b>4</b> Manipulação de dados no R</a><ul>
+<li class="chapter" data-level="4.1" data-path="manipulacao-de-dados-no-r.html"><a href="manipulacao-de-dados-no-r.html#conjunto-de-dados"><i class="fa fa-check"></i><b>4.1</b> Conjunto de dados</a></li>
+<li class="chapter" data-level="4.2" data-path="manipulacao-de-dados-no-r.html"><a href="manipulacao-de-dados-no-r.html#selecionando-colunas"><i class="fa fa-check"></i><b>4.2</b> Selecionando colunas</a></li>
+<li class="chapter" data-level="4.3" data-path="manipulacao-de-dados-no-r.html"><a href="manipulacao-de-dados-no-r.html#selecionando-linhas"><i class="fa fa-check"></i><b>4.3</b> Selecionando linhas</a></li>
+<li class="chapter" data-level="4.4" data-path="manipulacao-de-dados-no-r.html"><a href="manipulacao-de-dados-no-r.html#renomeando-variaveis"><i class="fa fa-check"></i><b>4.4</b> Renomeando variáveis</a></li>
+<li class="chapter" data-level="4.5" data-path="manipulacao-de-dados-no-r.html"><a href="manipulacao-de-dados-no-r.html#adicionando-variaveis"><i class="fa fa-check"></i><b>4.5</b> Adicionando variáveis</a></li>
+<li class="chapter" data-level="4.6" data-path="manipulacao-de-dados-no-r.html"><a href="manipulacao-de-dados-no-r.html#removendo-variaveis"><i class="fa fa-check"></i><b>4.6</b> Removendo variáveis</a></li>
+<li class="chapter" data-level="4.7" data-path="manipulacao-de-dados-no-r.html"><a href="manipulacao-de-dados-no-r.html#reordenando-as-linhas"><i class="fa fa-check"></i><b>4.7</b> Reordenando as linhas</a></li>
+<li class="chapter" data-level="4.8" data-path="manipulacao-de-dados-no-r.html"><a href="manipulacao-de-dados-no-r.html#encontrar-duplicatas"><i class="fa fa-check"></i><b>4.8</b> Encontrar duplicatas</a></li>
+<li class="chapter" data-level="4.9" data-path="manipulacao-de-dados-no-r.html"><a href="manipulacao-de-dados-no-r.html#renomeando-niveis"><i class="fa fa-check"></i><b>4.9</b> Renomeando níveis</a></li>
+<li class="chapter" data-level="4.10" data-path="manipulacao-de-dados-no-r.html"><a href="manipulacao-de-dados-no-r.html#salvando-arquivo"><i class="fa fa-check"></i><b>4.10</b> Salvando arquivo</a></li>
+<li class="chapter" data-level="4.11" data-path="manipulacao-de-dados-no-r.html"><a href="manipulacao-de-dados-no-r.html#transposicao"><i class="fa fa-check"></i><b>4.11</b> Transposição</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="sumarizacao-dos-dados.html"><a href="sumarizacao-dos-dados.html"><i class="fa fa-check"></i><b>5</b> Sumarização dos dados</a><ul>
+<li class="chapter" data-level="5.1" data-path="sumarizacao-dos-dados.html"><a href="sumarizacao-dos-dados.html#conjunto-de-dados-1"><i class="fa fa-check"></i><b>5.1</b> Conjunto de dados</a></li>
+<li class="chapter" data-level="5.2" data-path="sumarizacao-dos-dados.html"><a href="sumarizacao-dos-dados.html#dados-categoricos-1"><i class="fa fa-check"></i><b>5.2</b> Dados categóricos</a></li>
+<li class="chapter" data-level="5.3" data-path="sumarizacao-dos-dados.html"><a href="sumarizacao-dos-dados.html#dados-continuos-1"><i class="fa fa-check"></i><b>5.3</b> Dados contínuos</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="delineamentos-experimentais.html"><a href="delineamentos-experimentais.html"><i class="fa fa-check"></i><b>6</b> Delineamentos experimentais</a><ul>
+<li class="chapter" data-level="6.1" data-path="delineamentos-experimentais.html"><a href="delineamentos-experimentais.html#experimento-simples"><i class="fa fa-check"></i><b>6.1</b> Experimento simples</a><ul>
+<li class="chapter" data-level="6.1.1" data-path="delineamentos-experimentais.html"><a href="delineamentos-experimentais.html#inteiramente-casualizado"><i class="fa fa-check"></i><b>6.1.1</b> Inteiramente casualizado</a></li>
+<li class="chapter" data-level="6.1.2" data-path="delineamentos-experimentais.html"><a href="delineamentos-experimentais.html#blocos-casualizados"><i class="fa fa-check"></i><b>6.1.2</b> Blocos casualizados</a></li>
+</ul></li>
+<li class="chapter" data-level="6.2" data-path="delineamentos-experimentais.html"><a href="delineamentos-experimentais.html#experimento-fatorial"><i class="fa fa-check"></i><b>6.2</b> Experimento fatorial</a><ul>
+<li class="chapter" data-level="6.2.1" data-path="delineamentos-experimentais.html"><a href="delineamentos-experimentais.html#inteiramente-casualizado-1"><i class="fa fa-check"></i><b>6.2.1</b> Inteiramente casualizado</a></li>
+<li class="chapter" data-level="6.2.2" data-path="delineamentos-experimentais.html"><a href="delineamentos-experimentais.html#parcela-dividida"><i class="fa fa-check"></i><b>6.2.2</b> Parcela dividida</a></li>
+<li class="chapter" data-level="6.2.3" data-path="delineamentos-experimentais.html"><a href="delineamentos-experimentais.html#blocos-casualizados-1"><i class="fa fa-check"></i><b>6.2.3</b> Blocos casualizados</a></li>
+</ul></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">FIP 606</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="header">
+<h1 class="title">FIP 606</h1>
+<h4 class="author"><em>Prof. Emerson M. Del Ponte</em></h4>
+</div>
+<div id="prefacio" class="section level1 unnumbered">
+<h1>Prefácio</h1>
+<p>Este material está sendo elaborado como texto fundamental da disciplina <strong>FIP606 - Análise e visualização de dados em Fitopatologia</strong> oferecida na Pós-graduação em Fitopatologia da Universidade Federal de Viçosa. A disciplina, reformulada no ano de 2018, objetiva:</p>
+<blockquote>
+<p><strong>Capacitar os estudantes para conduzirem todas as etapas da pesquisa desde o planejamento da pesquisa, coleta, preparo e análise dos dados e comunicação dos resultados, no ambiente computacional R</strong></p>
+</blockquote>
+<p>Todas as etapas são ensinadas no ambiente de desenvolvimento integrado (IDE) <a href="https://www.rstudio.com/">R Studio</a>. A primeira versão desse material foi produzida em março de 2018 com fragmentos de textos e códigos em R Markdown produzidos nos três semestres anteriores desde que foi oferecida pela primeira vez em 2015.</p>
+<p>A apostila está sendo produzida em R Markdown que combina textos e códigos em R, utilizando o pacote de autoria de livros <a href="https://bookdown.org/yihui/bookdown/">bookdown</a> para a geração do livro no formato gitbook. A programação em R é ensinada no IDE RStudio e na filosofia do <code>tidyverse</code>.</p>
+<p>Embora a disciplina tenha como alvo estudantes de pós-graduação em Fitopatologia, os princípios e métodos de análise e visualização de dados aqui apresentados são comuns a outros áreas do conhecimento com tipos de dados e problemas similares.</p>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+
+<a href="introducao.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/index.Rmd",
+"text": "Edit"
+},
+"download": ["bookdown-demo.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

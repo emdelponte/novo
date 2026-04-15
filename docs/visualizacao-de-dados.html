@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>FIP 606</title>
+  <meta name="description" content="Disciplina da Pós-graduacão em Fitopatologia da UFV">
+  <meta name="generator" content="bookdown 0.7 and GitBook 2.6.7">
+
+  <meta property="og:title" content="FIP 606" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="Disciplina da Pós-graduacão em Fitopatologia da UFV" />
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="FIP 606" />
+  
+  <meta name="twitter:description" content="Disciplina da Pós-graduacão em Fitopatologia da UFV" />
+  
+
+<meta name="author" content="Prof. Emerson M. Del Ponte">
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="carregando-os-dados-no-ambiente.html">
+<link rel="next" href="manipulacao-de-dados-no-r.html">
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./index.html">FIP 606 </a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Prefácio</a></li>
+<li class="chapter" data-level="1" data-path="introducao.html"><a href="introducao.html"><i class="fa fa-check"></i><b>1</b> Introdução</a><ul>
+<li class="chapter" data-level="1.1" data-path="introducao.html"><a href="introducao.html#estatistica-e-computacao"><i class="fa fa-check"></i><b>1.1</b> Estatística e computação</a></li>
+<li class="chapter" data-level="1.2" data-path="introducao.html"><a href="introducao.html#a-pesquisa-reproduzivel"><i class="fa fa-check"></i><b>1.2</b> A pesquisa reproduzível</a></li>
+<li class="chapter" data-level="1.3" data-path="introducao.html"><a href="introducao.html#boas-praticas"><i class="fa fa-check"></i><b>1.3</b> Boas práticas</a></li>
+<li class="chapter" data-level="1.4" data-path="introducao.html"><a href="introducao.html#sugestao-de-leituras"><i class="fa fa-check"></i><b>1.4</b> Sugestão de leituras</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="carregando-os-dados-no-ambiente.html"><a href="carregando-os-dados-no-ambiente.html"><i class="fa fa-check"></i><b>2</b> Carregando os dados no ambiente</a><ul>
+<li class="chapter" data-level="2.1" data-path="carregando-os-dados-no-ambiente.html"><a href="carregando-os-dados-no-ambiente.html#usando-o-argumento-text"><i class="fa fa-check"></i><b>2.1</b> Usando o argumento text</a></li>
+<li class="chapter" data-level="2.2" data-path="carregando-os-dados-no-ambiente.html"><a href="carregando-os-dados-no-ambiente.html#importando-do-excel"><i class="fa fa-check"></i><b>2.2</b> Importando do excel</a></li>
+<li class="chapter" data-level="2.3" data-path="carregando-os-dados-no-ambiente.html"><a href="carregando-os-dados-no-ambiente.html#dados-em-outros-arquivos"><i class="fa fa-check"></i><b>2.3</b> Dados em outros arquivos</a></li>
+<li class="chapter" data-level="2.4" data-path="carregando-os-dados-no-ambiente.html"><a href="carregando-os-dados-no-ambiente.html#dados-em-pacotes"><i class="fa fa-check"></i><b>2.4</b> Dados em pacotes</a></li>
+<li class="chapter" data-level="2.5" data-path="carregando-os-dados-no-ambiente.html"><a href="carregando-os-dados-no-ambiente.html#dados-de-pacotes"><i class="fa fa-check"></i><b>2.5</b> Dados de pacotes</a></li>
+<li class="chapter" data-level="2.6" data-path="carregando-os-dados-no-ambiente.html"><a href="carregando-os-dados-no-ambiente.html#referencias-na-web"><i class="fa fa-check"></i><b>2.6</b> Referências na web</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="visualizacao-de-dados.html"><a href="visualizacao-de-dados.html"><i class="fa fa-check"></i><b>3</b> Visualização de dados</a><ul>
+<li class="chapter" data-level="3.1" data-path="visualizacao-de-dados.html"><a href="visualizacao-de-dados.html#dados-de-levantamento"><i class="fa fa-check"></i><b>3.1</b> Dados de levantamento</a></li>
+<li class="chapter" data-level="3.2" data-path="visualizacao-de-dados.html"><a href="visualizacao-de-dados.html#construindo-um-grafico"><i class="fa fa-check"></i><b>3.2</b> Construindo um gráfico</a></li>
+<li class="chapter" data-level="3.3" data-path="visualizacao-de-dados.html"><a href="visualizacao-de-dados.html#dados-categoricos"><i class="fa fa-check"></i><b>3.3</b> Dados categóricos</a></li>
+<li class="chapter" data-level="3.4" data-path="visualizacao-de-dados.html"><a href="visualizacao-de-dados.html#dados-continuos"><i class="fa fa-check"></i><b>3.4</b> Dados contínuos</a></li>
+<li class="chapter" data-level="3.5" data-path="visualizacao-de-dados.html"><a href="visualizacao-de-dados.html#continuos-x-categoricos"><i class="fa fa-check"></i><b>3.5</b> Contínuos x categóricos</a></li>
+<li class="chapter" data-level="3.6" data-path="visualizacao-de-dados.html"><a href="visualizacao-de-dados.html#duas-variaveis-continuas"><i class="fa fa-check"></i><b>3.6</b> Duas variáveis contínuas</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="manipulacao-de-dados-no-r.html"><a href="manipulacao-de-dados-no-r.html"><i class="fa fa-check"></i><b>4</b> Manipulação de dados no R</a><ul>
+<li class="chapter" data-level="4.1" data-path="manipulacao-de-dados-no-r.html"><a href="manipulacao-de-dados-no-r.html#conjunto-de-dados"><i class="fa fa-check"></i><b>4.1</b> Conjunto de dados</a></li>
+<li class="chapter" data-level="4.2" data-path="manipulacao-de-dados-no-r.html"><a href="manipulacao-de-dados-no-r.html#selecionando-colunas"><i class="fa fa-check"></i><b>4.2</b> Selecionando colunas</a></li>
+<li class="chapter" data-level="4.3" data-path="manipulacao-de-dados-no-r.html"><a href="manipulacao-de-dados-no-r.html#selecionando-linhas"><i class="fa fa-check"></i><b>4.3</b> Selecionando linhas</a></li>
+<li class="chapter" data-level="4.4" data-path="manipulacao-de-dados-no-r.html"><a href="manipulacao-de-dados-no-r.html#renomeando-variaveis"><i class="fa fa-check"></i><b>4.4</b> Renomeando variáveis</a></li>
+<li class="chapter" data-level="4.5" data-path="manipulacao-de-dados-no-r.html"><a href="manipulacao-de-dados-no-r.html#adicionando-variaveis"><i class="fa fa-check"></i><b>4.5</b> Adicionando variáveis</a></li>
+<li class="chapter" data-level="4.6" data-path="manipulacao-de-dados-no-r.html"><a href="manipulacao-de-dados-no-r.html#removendo-variaveis"><i class="fa fa-check"></i><b>4.6</b> Removendo variáveis</a></li>
+<li class="chapter" data-level="4.7" data-path="manipulacao-de-dados-no-r.html"><a href="manipulacao-de-dados-no-r.html#reordenando-as-linhas"><i class="fa fa-check"></i><b>4.7</b> Reordenando as linhas</a></li>
+<li class="chapter" data-level="4.8" data-path="manipulacao-de-dados-no-r.html"><a href="manipulacao-de-dados-no-r.html#encontrar-duplicatas"><i class="fa fa-check"></i><b>4.8</b> Encontrar duplicatas</a></li>
+<li class="chapter" data-level="4.9" data-path="manipulacao-de-dados-no-r.html"><a href="manipulacao-de-dados-no-r.html#renomeando-niveis"><i class="fa fa-check"></i><b>4.9</b> Renomeando níveis</a></li>
+<li class="chapter" data-level="4.10" data-path="manipulacao-de-dados-no-r.html"><a href="manipulacao-de-dados-no-r.html#salvando-arquivo"><i class="fa fa-check"></i><b>4.10</b> Salvando arquivo</a></li>
+<li class="chapter" data-level="4.11" data-path="manipulacao-de-dados-no-r.html"><a href="manipulacao-de-dados-no-r.html#transposicao"><i class="fa fa-check"></i><b>4.11</b> Transposição</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="sumarizacao-dos-dados.html"><a href="sumarizacao-dos-dados.html"><i class="fa fa-check"></i><b>5</b> Sumarização dos dados</a><ul>
+<li class="chapter" data-level="5.1" data-path="sumarizacao-dos-dados.html"><a href="sumarizacao-dos-dados.html#conjunto-de-dados-1"><i class="fa fa-check"></i><b>5.1</b> Conjunto de dados</a></li>
+<li class="chapter" data-level="5.2" data-path="sumarizacao-dos-dados.html"><a href="sumarizacao-dos-dados.html#dados-categoricos-1"><i class="fa fa-check"></i><b>5.2</b> Dados categóricos</a></li>
+<li class="chapter" data-level="5.3" data-path="sumarizacao-dos-dados.html"><a href="sumarizacao-dos-dados.html#dados-continuos-1"><i class="fa fa-check"></i><b>5.3</b> Dados contínuos</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="delineamentos-experimentais.html"><a href="delineamentos-experimentais.html"><i class="fa fa-check"></i><b>6</b> Delineamentos experimentais</a><ul>
+<li class="chapter" data-level="6.1" data-path="delineamentos-experimentais.html"><a href="delineamentos-experimentais.html#experimento-simples"><i class="fa fa-check"></i><b>6.1</b> Experimento simples</a><ul>
+<li class="chapter" data-level="6.1.1" data-path="delineamentos-experimentais.html"><a href="delineamentos-experimentais.html#inteiramente-casualizado"><i class="fa fa-check"></i><b>6.1.1</b> Inteiramente casualizado</a></li>
+<li class="chapter" data-level="6.1.2" data-path="delineamentos-experimentais.html"><a href="delineamentos-experimentais.html#blocos-casualizados"><i class="fa fa-check"></i><b>6.1.2</b> Blocos casualizados</a></li>
+</ul></li>
+<li class="chapter" data-level="6.2" data-path="delineamentos-experimentais.html"><a href="delineamentos-experimentais.html#experimento-fatorial"><i class="fa fa-check"></i><b>6.2</b> Experimento fatorial</a><ul>
+<li class="chapter" data-level="6.2.1" data-path="delineamentos-experimentais.html"><a href="delineamentos-experimentais.html#inteiramente-casualizado-1"><i class="fa fa-check"></i><b>6.2.1</b> Inteiramente casualizado</a></li>
+<li class="chapter" data-level="6.2.2" data-path="delineamentos-experimentais.html"><a href="delineamentos-experimentais.html#parcela-dividida"><i class="fa fa-check"></i><b>6.2.2</b> Parcela dividida</a></li>
+<li class="chapter" data-level="6.2.3" data-path="delineamentos-experimentais.html"><a href="delineamentos-experimentais.html#blocos-casualizados-1"><i class="fa fa-check"></i><b>6.2.3</b> Blocos casualizados</a></li>
+</ul></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">FIP 606</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="visualizacao-de-dados" class="section level1">
+<h1><span class="header-section-number">Capítulo 3</span> Visualização de dados</h1>
+<p>Na análise de dados, a visualização é uma etapa fundamental que permite ao pesquisador aprender sobre o conjunto de dados. A observação de dados em tabela não é muito informativa e pouco se pode aprender acerca de padrões, tendências e associações entre variáveis. É “enxergando” os dados que o pesquisador vai decidir sobre a necessidade de transformar, criar novas variáveis, e definir os modelos estatísticos a serem usados para testar as hipóteses.</p>
+<p>A visualização por meio de gráficos deve ser iniciada na fase de exploração e sumarização dos dados embora, de maneira geral, a idéia geral é que os gráficos são apenas necessários na etapa de comunicação dos resultados. São dois contextos diferentes em que se usam os procedimentos gráficos.</p>
+<p>Na etapa de visualização, o gráfico deve ser feito rapidamente e de maneira simples, utilizando tipos de gráficos apropriados para responder a uma determinada pergunta. O gráfico serve apenas para dar o subsídio necessário ao pesquisador para as decisões posteriores. Não é necessário que os gráficos sejam muito elaborados, com muitos detalhes (com títulos de eixos, legendas, etc.). Eles estão longe de serem os gráficos que serão apresentados em um publicação. Esses últimos exigirão um bom tempo do pesquisador para elaborar um bom gráfico para uma comunicação efetiva. Voltaremos nesse assunto mais para frente no capítulo sobre comunicação dos resultados.</p>
+<p>Neste capítulo, os dados servão visualizados no R utilizando-se o pacote <code>ggplot2</code> que é considerado o “estado da arte” em visualização de dados no R <a href="http://docs.ggplot2.org/current/">ver página do ggplot2</a>. Tradicionalmente, gráficos em R são elaboradores com funções do pacote <code>Graphics</code> que é nativo do R base, o qual foi desenvolvido e mantido pelo “R Core Team” e colaboradores ao redor do mundo. As funções de gráficos do R base tem uma sintaxe diferente do <code>ggplot2</code> e não serão abordados nesse capítulo.</p>
+<div id="dados-de-levantamento" class="section level2">
+<h2><span class="header-section-number">3.1</span> Dados de levantamento</h2>
+<p>A partir de agora, iremos visualizar os dados do levantamento e identificação de isolados de fungos do complexo de espécie <em>Fusarium gramineraum</em> obtidos de lavouras de trigo do sul do Brasil <a href="http://apsjournals.apsnet.org/doi/abs/10.1094/PHYTO-04-14-0102-R">Del Ponte et al., 2015</a> que trabalhamos nos capítulos anteriores. O conjunto já está em formato “arrumado”(tradução para “tidy”) onde cada linha do data frame é um isolado e cada coluna é uma variável, no caso um metadado associado com cada isolado.</p>
+<p>Na sequencia, vamos carregar esse conjunto de dados e selecionar apenas os isolados obtidos no Estado do Rio Grande do Sul por meio da função <code>filter</code> do pacote <code>dplyr</code> e atribuir ao data frame <code>survey_rs</code>. Após carregar os dados, é importante observar todas as variáveis do conjunto, o que nos dará ideia das perguntas acerca do conjunto de dados que serão feitas durante a visualização e assim elaborar as hipóteses a serem verificadas.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(readr)
+survey2 &lt;-<span class="st"> </span><span class="kw">read_csv</span> (<span class="st">&quot;data/survey2.csv&quot;</span>)
+<span class="kw">library</span>(dplyr)
+survey_rs &lt;-<span class="st"> </span><span class="kw">filter</span>(survey2, state <span class="op">==</span><span class="st"> &quot;RS&quot;</span>)</code></pre></div>
+</div>
+<div id="construindo-um-grafico" class="section level2">
+<h2><span class="header-section-number">3.2</span> Construindo um gráfico</h2>
+<p>Um gráfico <code>ggplot2</code> é feito com pelo menos duas funções. A primeira, <code>ggplot</code>, permite criar um sistema de coordenada do gráfico. Nela, o primeiro argumento esperado (o que vai entre parênteses) é o nome do conjunto de dados. Ao executar a função <code>ggplot</code> note que aparecerá um gráfico “vazio” para o conjunto <code>survey_rs</code>.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(ggplot2)
+<span class="kw">ggplot</span>(survey_rs)</code></pre></div>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-9-1.png" width="672" /></p>
+<p>Na sequencia, deve ser informado um tipo de objeto geométrico (“geoms”) na forma de uma camada (layer) no gráfico. No contexto do conjunto de dados de trabalho, vamos responder à seguinte pergunta: <em>O número de isolados em amostrados foi igual em cada um dos anos do levantamento</em>? (lembrando que ano é uma variável categórica).</p>
+</div>
+<div id="dados-categoricos" class="section level2">
+<h2><span class="header-section-number">3.3</span> Dados categóricos</h2>
+<p>No <code>ggplot2</code> após entrar com a função <code>ggplot</code>, novas funções são adicionadas após o sinal positivo (+). O “geom” que iremos usar é o <code>geom_bar</code>, indicado para representar o número total de observações geral ou segundo alguma condição - um outra variável categórica.</p>
+<p>Seguindo com a construção de nosso gráfico no <code>ggplot2</code> com dados condicionados por categorias de uma variável (no caso os níveis da variável “year”), essas são infomadas no atributo de estética <code>aes</code> que pode ser informado tanto na função <code>ggplot</code> ou na função <code>geom_bar</code>. O primeiro caso é a forma mais utilizada já que condiciona toda as outras camadas que poderão ser adicionadas no gráfico.</p>
+<p>Na função <code>geom_bar</code>, como padrão, os dados apresentados são o somatório do número de linhas (isolados) em cada ano. Veja abaixo as duas formas de obter o mesmo resultado.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(survey_rs, <span class="kw">aes</span>(year))<span class="op">+</span>
+<span class="st">  </span><span class="kw">geom_bar</span>(<span class="dt">color =</span> <span class="st">&quot;black&quot;</span>, <span class="dt">fill =</span> <span class="st">&quot;blue&quot;</span>)<span class="op">+</span>
+<span class="st"> </span><span class="kw">theme_light</span>()</code></pre></div>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-10-1.png" width="672" /></p>
+<p>Podemos ampliar a pergunta sobre quantos isolados em cada ano e em cada campo com determinado resto cultural. Assim, teremos duas informações apresentadas no gráfico o que exigirá uma legenda para auxilizar na interpretação. No <code>ggplot2</code>, a legenda é colocada automaticamente após definir o atributo <code>fill</code>. As cores são definidas automaticamente, sempre em uma mesma ordem, iniciando pelo vermelho, verde, azul, etc.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(ggthemes)
+survey_rs <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st"> </span><span class="kw">filter</span>(residue <span class="op">!=</span><span class="st"> &quot;potato&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st"> </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(year, <span class="dt">fill=</span>residue))<span class="op">+</span>
+<span class="st">  </span><span class="kw">geom_bar</span>(<span class="dt">position =</span> <span class="st">&quot;dodge&quot;</span>)<span class="op">+</span>
+<span class="st"> </span><span class="kw">theme_few</span>()<span class="op">+</span>
+<span class="st">  </span><span class="kw">theme</span>(<span class="dt">legend.position =</span> <span class="st">&quot;right&quot;</span>)<span class="op">+</span>
+<span class="st"> </span><span class="co">#scale_fill_manual(values = c(&quot;blue&quot;, &quot;yellow&quot;))+</span>
+<span class="st"> </span><span class="kw">labs</span>(<span class="dt">title =</span> <span class="st">&quot;Titulo do gráfico&quot;</span>, <span class="dt">x =</span> <span class="st">&quot;Ano&quot;</span>, <span class="dt">y =</span> <span class="st">&quot;Frequencia&quot;</span>, <span class="dt">fill =</span> <span class="st">&quot;Residue&quot;</span>)</code></pre></div>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-11-1.png" width="672" /></p>
+<p>Podemos modificar a posição das categorias com os atributos “stack”, “dodge” e “fill”. O padrão do geom_bar é a posição “stack”</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(survey_rs, <span class="kw">aes</span>(<span class="dt">x=</span> year, <span class="dt">fill =</span> species))<span class="op">+</span>
+<span class="st">  </span><span class="kw">geom_bar</span>()</code></pre></div>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-12-1.png" width="672" /></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(survey_rs, <span class="kw">aes</span>(<span class="dt">x=</span> year, <span class="dt">fill =</span> species))<span class="op">+</span>
+<span class="st">  </span><span class="kw">geom_bar</span>(<span class="dt">position =</span> <span class="st">&quot;dodge&quot;</span>)</code></pre></div>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-13-1.png" width="672" /></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(survey_rs, <span class="kw">aes</span>(<span class="dt">x=</span> year, <span class="dt">fill =</span> species))<span class="op">+</span>
+<span class="st">  </span><span class="kw">geom_bar</span>(<span class="dt">position =</span> <span class="st">&quot;fill&quot;</span>)</code></pre></div>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-14-1.png" width="672" /></p>
+<p>Podemos modificar o sistema de coordenadas para mostrar o número de isolados por espécies em um sistema polar.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(survey_rs, <span class="kw">aes</span>(<span class="dt">x=</span> <span class="kw">factor</span>(year), <span class="dt">fill =</span> species))<span class="op">+</span>
+<span class="st">  </span><span class="kw">geom_bar</span>()<span class="op">+</span>
+<span class="st">  </span><span class="kw">coord_polar</span>()</code></pre></div>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-15-1.png" width="672" /></p>
+<p>Alternativamente, similar a um gráfico de torta ou pizza</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(survey_rs, <span class="kw">aes</span>(<span class="dt">x=</span> <span class="kw">factor</span>(year), <span class="dt">fill =</span> species), <span class="dt">width =</span> <span class="dv">1</span>)<span class="op">+</span>
+<span class="st">  </span><span class="kw">geom_bar</span>()<span class="op">+</span>
+<span class="st">  </span><span class="kw">coord_polar</span>(<span class="dt">theta =</span> <span class="st">&quot;y&quot;</span>)</code></pre></div>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-16-1.png" width="672" /></p>
+<hr />
+<p><strong>Exercício</strong></p>
+<p>Com base no que foi exposto, elabore gráficos de barras para outras variáveis categóricas respondendo às seguintes perguntas:</p>
+<ul>
+<li><p>O número de isolados foi diferente em campos de trigo com resíduos de soja e milho?</p></li>
+<li><p>Qual a espécie encontrada em maior frequencia no geral e em cada ano?</p></li>
+<li><p>Quais os cinco municípios que contribuiram com maior número de isolados?</p></li>
+<li><p>Qual a espécie encontrada em maior frequencia? Houve variação dessa frequencia entre os anos?</p></li>
+</ul>
+<hr />
+</div>
+<div id="dados-continuos" class="section level2">
+<h2><span class="header-section-number">3.4</span> Dados contínuos</h2>
+<p>Para dados contínuos, normalmente utilizamos histogramas, dotplots ou boxplots para descrever uma variável contínua isoladamente com outra contínua ou mesmo uma contínua com outra categórica. Gráficos de dispersão de pontos são usados para relacionar duas variáveis contínuas.</p>
+<p>No nosso conjunto, podemos perguntar sobre a origem dos isolados. Antes disso, vamos verificar primeiro se há mais um isolado amostrado em cada ponto (campo) usando a função <code>table</code> que irá sumarizar o número de entradas por campo. Vamos colocar os dados no formato de uma <code>data.frame</code> e listar apenas os seis primeiros registros.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">head</span>(<span class="kw">data.frame</span>(<span class="kw">table</span>(survey_rs<span class="op">$</span>field)))</code></pre></div>
+<pre><code>##   Var1 Freq
+## 1    1    9
+## 2    2    9
+## 3    3    6
+## 4    4   11
+## 5    5   12
+## 6    6    8</code></pre>
+<p>Nota-se que temos campos que contribuiram com mais de um isolado. Então, para que não tenhamos múltiplos pontos em cada local, iremos selecionar apenas uma observação de cada campo combinando a função <code>unique</code> com a função <code>select</code> e atribuir essa seleção ao conjunto <code>field_rs</code>.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">field_rs &lt;-<span class="st"> </span><span class="kw">unique</span>(<span class="kw">select</span>(survey_rs, <span class="kw">c</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">6</span>, <span class="dv">7</span><span class="op">:</span><span class="dv">9</span>)))
+
+field_rs<span class="op">$</span>year &lt;-<span class="st"> </span><span class="kw">as.factor</span>(field_rs<span class="op">$</span>year)
+<span class="co"># vamos transformar year que é um variável numérica para factor</span></code></pre></div>
+<p>Agora, podemos fazer um gráfico da relação entre latitude e longitude (duas variáveis contínuas) que permitirá visualizar a localização geográfica dos campos amostrados.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(field_rs, <span class="kw">aes</span>(long, lat))<span class="op">+</span>
+<span class="st">  </span><span class="kw">geom_point</span>()</code></pre></div>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-19-1.png" width="672" /></p>
+<p>No gráfico acima, os pontos representam os três anos da amostragem. Podemos usar diferentes marcadores que identificam os diferentes anos.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(field_rs, <span class="kw">aes</span>(long, lat, <span class="dt">shape=</span><span class="kw">factor</span>(year)))<span class="op">+</span>
+<span class="st">  </span><span class="kw">geom_point</span>()</code></pre></div>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-20-1.png" width="672" /></p>
+<p>Para faciliar ainda mais a identificação dos pontos, podemos usar cores.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(field_rs, <span class="kw">aes</span>(long, lat, <span class="dt">shape =</span> <span class="kw">factor</span>(year), <span class="dt">color =</span> <span class="kw">factor</span>(year)))<span class="op">+</span>
+<span class="st">  </span><span class="kw">geom_point</span>(<span class="dt">size=</span><span class="dv">3</span>) <span class="co"># aumentamos um pouco o tamanho do símbolo!</span></code></pre></div>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-21-1.png" width="672" /></p>
+<p>Ou então, podemos utilizar a função <code>facet_wrap</code> para criar três gráficos condicionando pelo ano.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(field_rs, <span class="kw">aes</span>(long, lat))<span class="op">+</span>
+<span class="st">  </span><span class="kw">geom_point</span>(<span class="dt">size=</span><span class="dv">3</span>)<span class="op">+</span>
+<span class="st">   </span><span class="kw">facet_wrap</span>(<span class="op">~</span>year, <span class="dt">ncol=</span><span class="dv">1</span>)</code></pre></div>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-22-1.png" width="672" /></p>
+<p>Uma outra pergunta que poderia ser feita, considerando variáveis contínuas, é sobre a distribuição dos valores de incidência e severidade nos campos visitados. Nesse caso, podemos usar histrogramas. No <code>ggplot2</code>, usamos a função <code>geom_histogram</code> para gerar um histograma da distribuição dos valores de severidade e de incidência. Note que o número de “bins” (categorias) é definido automaticamente.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">field_rs <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st"> </span><span class="kw">filter</span>(residue <span class="op">!=</span><span class="st"> &quot;potato&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="kw">factor</span>(year), sev))<span class="op">+</span>
+<span class="st"> </span><span class="kw">geom_boxplot</span>()<span class="op">+</span>
+<span class="st"> </span><span class="kw">geom_jitter</span>(<span class="dt">width=</span><span class="fl">0.2</span>, <span class="dt">height=</span><span class="dv">0</span>, <span class="dt">alpha=</span><span class="fl">0.4</span>)<span class="op">+</span>
+<span class="st"> </span><span class="kw">theme_grey</span>()<span class="op">+</span>
+<span class="st"> </span><span class="kw">facet_wrap</span>(<span class="op">~</span>residue)<span class="op">+</span>
+<span class="st"> </span><span class="kw">ylim</span>(<span class="dv">0</span>,<span class="dv">25</span>)<span class="op">+</span>
+<span class="st"> </span><span class="kw">ggsave</span>(<span class="st">&quot;box1.png&quot;</span>, <span class="dt">width=</span><span class="dv">6</span>, <span class="dt">height=</span><span class="dv">3</span>)</code></pre></div>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-23-1.png" width="672" /></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(field_rs, <span class="kw">aes</span>(<span class="dt">x=</span> sev))<span class="op">+</span>
+<span class="st">  </span><span class="kw">geom_freqpoly</span>()</code></pre></div>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-24-1.png" width="672" /></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># vamos alterar o número de bins</span>
+<span class="kw">ggplot</span>(field_rs, <span class="kw">aes</span>(<span class="dt">x=</span> inc))<span class="op">+</span>
+<span class="st">  </span><span class="kw">geom_histogram</span>(<span class="dt">bins =</span> <span class="dv">10</span>)</code></pre></div>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-24-2.png" width="672" /></p>
+<p>O histograma é um ótima maneira de mostrar a simetria/assimetria da distribuição. Por exemplo, no caso da severidade, é evidente que há um concentração muito maior de valores abaixo de 2.5% e alguns poucos valores acima de 5%.</p>
+<p>Podemos visualizar os mesmos dados sob uma outra perspectiva, que é através do uso de boxplots com a função <code>geom_boxplot</code>. Veja <a href="http://www.cbsolution.net/techniques/ontarget/box_plots_clearly_explained.html">explicação sobre boxplot</a>.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(field_rs, <span class="kw">aes</span>(<span class="dt">x =</span> field, <span class="dt">y =</span> inc))<span class="op">+</span><span class="st"> </span><span class="co"># usamos aqui uma variável contínua no x para um histograma para incidência</span>
+<span class="st">  </span><span class="kw">geom_boxplot</span>() </code></pre></div>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-25-1.png" width="672" /></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(field_rs, <span class="kw">aes</span>(<span class="dt">x =</span> inc, <span class="dt">y =</span> sev))<span class="op">+</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">geom_boxplot</span>()<span class="op">+</span>
+<span class="st"> </span><span class="kw">facet_wrap</span>(<span class="op">~</span>year)</code></pre></div>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-25-2.png" width="672" /></p>
+<p>Outras formas de visualizar dados contínuos podem ser feitas com os seguintes geoms.</p>
+<p><code>geom_area</code> <code>geom_density</code> <code>geom_dotplot</code> <code>geom_freqpoly</code></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(field_rs, <span class="kw">aes</span>(sev))<span class="op">+</span>
+<span class="st">        </span><span class="kw">geom_dotplot</span>(<span class="dt">method =</span> <span class="st">&quot;histodot&quot;</span>, <span class="dt">dotsize=</span><span class="fl">0.75</span>)</code></pre></div>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-26-1.png" width="672" /></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(field_rs, <span class="kw">aes</span>(inc), <span class="dt">fill =</span> year)<span class="op">+</span><span class="st">  </span><span class="kw">geom_dotplot</span>(<span class="dt">method =</span> <span class="st">&quot;histodot&quot;</span>, <span class="dt">dotsize=</span><span class="dv">1</span>)</code></pre></div>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-26-2.png" width="672" /></p>
+</div>
+<div id="continuos-x-categoricos" class="section level2">
+<h2><span class="header-section-number">3.5</span> Contínuos x categóricos</h2>
+<p>Podemos fazer <em>boxplots</em> para variáveis contínuas condicionadas por variáveis categóricas. Podemos responder a pergunta sobre a existência de variação de severidade entre os anos amostrados, por exemplo. O boxplot mostra na linha no centro da caixa a mediana e os valores discrepantes (outliers) que são os pontos acima da linha vertical.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(field_rs, <span class="kw">aes</span>(year, sev))<span class="op">+</span>
+<span class="st"> </span><span class="kw">geom_boxplot</span>()</code></pre></div>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-27-1.png" width="672" /></p>
+<p>Uma outra forma é mostrar todas as observações de severidade de cada campo em cada ano.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(field_rs, <span class="kw">aes</span>(year, sev))<span class="op">+</span>
+<span class="st"> </span><span class="kw">geom_point</span>()</code></pre></div>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-28-1.png" width="672" /></p>
+<p>Nesse caso acima, note que os pontos com valor iguais ou muito próximos ficaram sobrepostos o que dificulta a visualização do número de pontos. Podemos utilizar a função <code>geom_jitter</code> para adicionar um ruído aleatório nos dados que permitirá a visualização dos pontos que estão “escondidos”.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(field_rs, <span class="kw">aes</span>(year, sev))<span class="op">+</span>
+<span class="st"> </span><span class="kw">geom_jitter</span>()</code></pre></div>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-29-1.png" width="672" /></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># podemos diminuir um pouco o ruído e mudar o símbolo e adicionar uma transparência</span>
+<span class="kw">ggplot</span>(field_rs, <span class="kw">aes</span>(year, sev))<span class="op">+</span>
+<span class="st"> </span><span class="kw">geom_jitter</span>(<span class="dt">width =</span> <span class="fl">0.3</span>, <span class="dt">shape =</span> <span class="dv">1</span>, <span class="dt">size=</span><span class="fl">1.5</span>, <span class="dt">alpha =</span> <span class="fl">0.5</span>)</code></pre></div>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-29-2.png" width="672" /></p>
+<p>Podemos combinar o boxplot com o gráfico de pontos. Nesse caso é necessário retirar os outliers do boxplot pois estão duplicandos os pontos já mostrados.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(field_rs, <span class="kw">aes</span>(year, sev))<span class="op">+</span>
+<span class="st"> </span><span class="kw">geom_boxplot</span>(<span class="dt">outlier.shape =</span> <span class="ot">NA</span>)<span class="op">+</span>
+<span class="st"> </span><span class="kw">geom_jitter</span>(<span class="dt">width =</span> <span class="fl">0.3</span>, <span class="dt">shape =</span> <span class="dv">1</span>, <span class="dt">size=</span><span class="fl">1.5</span>, <span class="dt">alpha =</span> <span class="fl">0.5</span>)</code></pre></div>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-30-1.png" width="672" /></p>
+<p>Podemos criar um boxplot condiciondo pelo tipo de resíduo na superfície.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(field_rs, <span class="kw">aes</span>(residue, sev, <span class="dt">fill =</span> residue))<span class="op">+</span>
+<span class="st"> </span><span class="kw">geom_boxplot</span>(<span class="dt">outlier.shape =</span> <span class="ot">NA</span>)<span class="op">+</span>
+<span class="st"> </span><span class="kw">geom_jitter</span>(<span class="dt">width =</span> <span class="fl">0.3</span>, <span class="dt">shape =</span> <span class="dv">1</span>, <span class="dt">size=</span><span class="fl">1.5</span>, <span class="dt">alpha =</span> <span class="fl">0.5</span>)</code></pre></div>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-31-1.png" width="672" /></p>
+</div>
+<div id="duas-variaveis-continuas" class="section level2">
+<h2><span class="header-section-number">3.6</span> Duas variáveis contínuas</h2>
+<p>As variáveis incidência e severidade são ambas de natureza contínua e intrinsecamente relacionadas. A incidência se refere à proporção de espigas doentes. Já a severidade, se refere à proporção de espiguestas doentes em uma amostra de espigas. Ou seja, a espiga é um conjunto de espiguetas. Assim, se espera que em situações com maior proporção de espigas doentes, que surgiram por ocasião de condições favoráveis à doença, também se tenha maior proporção de espiguetas doentes. Vejamos se nossa hipótese é verdadeira. Vamos visualizar a relação entre ambas as variáveis.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">field_rs <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st"> </span><span class="kw">filter</span>(residue <span class="op">!=</span><span class="st"> &quot;potato&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="kw">ggplot</span>(<span class="kw">aes</span>(inc, sev))<span class="op">+</span>
+<span class="st"> </span><span class="kw">geom_point</span>(<span class="dt">alpha=</span><span class="fl">0.4</span>)<span class="op">+</span>
+<span class="st"> </span><span class="kw">theme_grey</span>()<span class="op">+</span>
+<span class="st"> </span><span class="kw">geom_smooth</span>(<span class="dt">method =</span> <span class="st">&quot;loess&quot;</span>, <span class="dt">color=</span><span class="st">&quot;black&quot;</span>, <span class="dt">se =</span> F)<span class="op">+</span>
+<span class="st"> </span><span class="kw">facet_wrap</span>(<span class="op">~</span><span class="st"> </span>year)</code></pre></div>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-32-1.png" width="672" /></p>
+<p>Podemos notar que, de maneira geral, há um aumento da severidade com o aumento da incidência, o que dá indícios de que nossa hipótese possa estar correta. Podemos notar também que a relação não é linear. Vamos verificar se essa relação existe independe do ano.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(field_rs, <span class="kw">aes</span>(inc, sev))<span class="op">+</span>
+<span class="st"> </span><span class="kw">geom_point</span>()<span class="op">+</span>
+<span class="st"> </span><span class="kw">facet_wrap</span>(<span class="op">~</span><span class="st"> </span>residue)</code></pre></div>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-33-1.png" width="672" /></p>
+<p>No ano de 2011, os valores de severidade foram mais baixos, embora com alguns casos de incidência mais alta. Biologicamente, isso quer dizer que houve condição para infecção, com descontinuidade de ambiente favorável para o progresso da doença! Já estamos aprendendo algo sobre os dados e sugerindo hipóteses apenas com a visualização apropriada dos dados.</p>
+<hr />
+<p><strong>Exercícios</strong></p>
+<ul>
+<li><p>Faça o gráfico da relação incidência e severidade com cores diferentes dos símbolos para cada ano</p></li>
+<li><p>Verifique se a relação inc e sev muda entre os campos com os diferentes resíduos</p></li>
+</ul>
+<hr />
+<p>Podemos verificar se há uma tendência de agregação espacial dos valores de severidade nos diferentes anos.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(field_rs, <span class="kw">aes</span>(lat, long))<span class="op">+</span>
+<span class="st"> </span><span class="kw">geom_point</span>(<span class="kw">aes</span>(<span class="dt">color =</span> sev), <span class="dt">size=</span><span class="dv">2</span>)<span class="op">+</span>
+<span class="st"> </span><span class="kw">facet_wrap</span>( <span class="op">~</span><span class="st"> </span>year, <span class="dt">ncol=</span><span class="dv">1</span>)<span class="op">+</span>
+<span class="st"> </span><span class="kw">scale_colour_gradient</span>(<span class="dt">low =</span> <span class="st">&quot;darkgreen&quot;</span>, <span class="dt">high =</span><span class="st">&quot;yellow&quot;</span> )</code></pre></div>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-34-1.png" width="672" /></p>
+<p>Uma outra possibilidade é utilizar o tamanho variável do ponto em função da severidade</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(field_rs, <span class="kw">aes</span>(lat, long))<span class="op">+</span>
+<span class="st"> </span><span class="kw">geom_point</span>(<span class="kw">aes</span>(<span class="dt">size =</span> sev), <span class="dt">color =</span> <span class="st">&quot;grey&quot;</span>)<span class="op">+</span>
+<span class="st"> </span><span class="kw">facet_wrap</span>( <span class="op">~</span><span class="st"> </span>year, <span class="dt">ncol=</span><span class="dv">1</span>)</code></pre></div>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-35-1.png" width="672" /></p>
+<hr />
+<p><strong>Referências</strong></p>
+<p><a href="http://docs.ggplot2.org/current/">Official ggplot2 tutorial</a></p>
+<p><a href="http://tutorials.iq.harvard.edu/R/Rgraphics/Rgraphics.html">Introduction to R Graphics with ggplot2</a> <a href="http://rpubs.com/SusanEJohnston/7953">R Base Graphics: An Idiot’s Guide</a></p>
+<p><a href="https://flowingdata.com/2016/03/22/comparing-ggplot2-and-r-base-graphics/">Comparing ggplot2 and R Base Graphics</a></p>
+<p><a href="http://www.cookbook-r.com/Graphs/index.html">Cookbook for R</a></p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="carregando-os-dados-no-ambiente.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="manipulacao-de-dados-no-r.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"linkedin": false,
+"weibo": false,
+"instapper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/02-visualiza-dados.Rmd",
+"text": "Edit"
+},
+"download": ["bookdown-demo.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>
